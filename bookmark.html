@@ -1,0 +1,405 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2019-05-30 qui 22:21 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>&lrm;</title>
+<meta name="generator" content="Org mode" />
+<meta name="author" content="pseifer" />
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #eee;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: visible;
+    padding-top: 1.2em;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: -10px;
+    right: 10px;
+    padding: 3px;
+    border: 1px solid black;
+  }
+  pre.src:hover:before { display: inline;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { width: 90%; }
+  /*]]>*/-->
+</style>
+<script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2018 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+</head>
+<body>
+<div id="content">
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#orgb85a8d6">1. Bookmark</a>
+<ul>
+<li><a href="#org2b8d031">1.1. Energia, desenvolvimento</a></li>
+<li><a href="#org63fa0a0">1.2. Jornais, revistas etc</a></li>
+<li><a href="#org7a90a24">1.3. História, ciências etc</a></li>
+<li><a href="#org718cf8f">1.4. Carpintaria, artesanato, trabalho manual etc</a></li>
+<li><a href="#org6b84a96">1.5. Astrofoto</a></li>
+<li><a href="#org52bdfc2">1.6. Imagem, vídeo, filmes, séries etc</a></li>
+<li><a href="#org69a250d">1.7. Pão, café etc</a></li>
+<li><a href="#org35afacd">1.8. Estatística, R, IBGE etc</a></li>
+<li><a href="#org3f300f6">1.9. Diversos</a></li>
+<li><a href="#orgfb89225">1.10. Programação, desenvolvimento, computação etc</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<p>
+Bookmark
+</p>
+
+<div id="outline-container-orgb85a8d6" class="outline-2">
+<h2 id="orgb85a8d6"><span class="section-number-2">1</span> Bookmark</h2>
+<div class="outline-text-2" id="text-1">
+<ul class="org-ul">
+<li><a href="http://orgmode.org/orgcard.txt">http://orgmode.org/orgcard.txt não está disponível</a></li>
+<li><a href="https://orgmode.org/worg/org-glossary.html">https://orgmode.org/worg/org-glossary.html</a></li>
+<li><a href="https://www.debuggex.com/">Debuga Regex</a></li>
+</ul>
+</div>
+
+<div id="outline-container-org2b8d031" class="outline-3">
+<h3 id="org2b8d031"><span class="section-number-3">1.1</span> Energia, desenvolvimento</h3>
+<div class="outline-text-3" id="text-1-1">
+<ul class="org-ul">
+<li><a href="https://www.sciencedirect.com/journal/energy-research-and-social-science/">Energy Research and Social Science Journal</a></li>
+<li><a href="https://onlinelibrary.wiley.com/journal/14677660">Development and Social Change Journal</a></li>
+<li><a href="http://energy.mit.edu/">http://energy.mit.edu/</a></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org63fa0a0" class="outline-3">
+<h3 id="org63fa0a0"><span class="section-number-3">1.2</span> Jornais, revistas etc</h3>
+<div class="outline-text-3" id="text-1-2">
+<ul class="org-ul">
+<li><a href="https://www.atlasobscura.com/">https://www.atlasobscura.com/</a></li>
+<li><a href="https://arstechnica.com/">https://arstechnica.com/</a></li>
+<li><a href="http://science.sciencemag.org/">http://science.sciencemag.org/</a></li>
+<li><a href="http://pagina22.com.br/">http://pagina22.com.br/</a></li>
+<li><a href="http://www.p22on.com.br/">http://www.p22on.com.br/</a></li>
+<li><a href="https://www.nationalgeographicbrasil.com/">https://www.nationalgeographicbrasil.com/</a></li>
+<li><a href="https://www.nationalgeographic.com/">https://www.nationalgeographic.com/</a></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org7a90a24" class="outline-3">
+<h3 id="org7a90a24"><span class="section-number-3">1.3</span> História, ciências etc</h3>
+<div class="outline-text-3" id="text-1-3">
+<ul class="org-ul">
+<li><a href="https://www.coase.org/niereadinglist.htm">New Institutional Economics: Reading List, Introductory</a></li>
+<li><a href="https://colunastortas.wordpress.com/2015/08/03/pierre-bourdieu-download/#bourdieu3">18 livros de Pierre Bourdieu para download gratuito + 21 artigos sobre sua obra | Colunas Tortas</a></li>
+<li><a href="http://acertodecontas.blog.br/artigos/breve-historia-do-sertao-pernambucano/">Por uma história da ocupação dos Sertões de Pernambuco | Acerto de Contas</a></li>
+<li><a href="http://revistacult.uol.com.br/home/2010/03/pequeno-glossario-da-teoria-de-bourdieu/">Revista Cult Pequeno glossário da teoria de Bourdieu - Revista Cult</a></li>
+<li><a href="http://www.liber.ufpe.br/teses/arquivo/20041028135821.pdf">Posseiros, rendeiros e proprietários: estrutura fundiária e dinâmica agro-mercantil no alto sertão da bahia (1750-1850)</a></li>
+<li><a href="http://memoria.bn.br/hdb/periodico.aspx">::: BIBLIOTECA NACIONAL - Hemeroteca Digital Brasileira:::</a></li>
+<li><a href="http://visual-memory.co.uk/daniel/Documents/S4B/semiotic.html">Semiotics for Beginners by Daniel Chandler</a></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org718cf8f" class="outline-3">
+<h3 id="org718cf8f"><span class="section-number-3">1.4</span> Carpintaria, artesanato, trabalho manual etc</h3>
+<div class="outline-text-3" id="text-1-4">
+<ul class="org-ul">
+<li><a href="https://www.tripadvisor.com.br/Attraction_Review-g298562-d7147573-Reviews-Takenaka_Carpentry_Tools_Museum-Kobe_Hyogo_Prefecture_Kinki.html">Takenaka Carpentry Tools Museum - Kobe - Avaliações de Takenaka Carpentry Tools Museum - TripAdvisor</a></li>
+<li><a href="http://www.artofmanliness.com/2016/01/21/how-to-restore-a-vintageantique-pocket-knife/">How To Clean &amp;amp; Restore A Vintage Pocketknife | The Art Of Manliness</a></li>
+<li><a href="http://www.tameshigiri.ca/2014/06/03/cord-rope-and-combat/">Cord, rope and combat | Tameshigiri.ca</a></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org6b84a96" class="outline-3">
+<h3 id="org6b84a96"><span class="section-number-3">1.5</span> Astrofoto</h3>
+<div class="outline-text-3" id="text-1-5">
+<ul class="org-ul">
+<li><a href="http://nova.astrometry.net/">Astrometry.net</a></li>
+<li><a href="http://darksitefinder.com/maps/world.html">DarkSiteFinder.com - Light Pollution Map</a></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org52bdfc2" class="outline-3">
+<h3 id="org52bdfc2"><span class="section-number-3">1.6</span> Imagem, vídeo, filmes, séries etc</h3>
+<div class="outline-text-3" id="text-1-6">
+<ul class="org-ul">
+<li><a href="http://www.cambridgeincolour.com/">Cambridge in Colour - Photography Tutorials &amp;amp; Learning Community</a></li>
+<li><a href="http://filmescult.com.br/akira-kurosawa/">Akira Kurosawa - Filmografia | Download</a></li>
+<li><a href="http://www.outerplaces.com/star-wars-timeline/">Star Wars Timeline | Outer Places</a></li>
+<li><a href="https://www.sofilmestorrent.com/baixar-supernatural-14a-temporada-2018-dublado-legendado-download/">https://www.sofilmestorrent.com/baixar-supernatural-14a-temporada-2018-dublado-legendado-download/</a></li>
+<li><a href="https://murodoclassicrock4.blogspot.com/">https://murodoclassicrock4.blogspot.com/</a> - Downloads diversos</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org69a250d" class="outline-3">
+<h3 id="org69a250d"><span class="section-number-3">1.7</span> Pão, café etc</h3>
+<div class="outline-text-3" id="text-1-7">
+<ul class="org-ul">
+<li><a href="http://www.thefreshloaf.com/handbook/poolish-baguettes">Poolish Baguettes | The Fresh Loaf</a></li>
+<li><a href="http://www1.folha.uol.com.br/comida/2015/02/1591778-veja-o-passo-a-passo-para-fazer-queijo-em-casa-e-saiba-mais-sobre-maturacao.shtml">Veja o passo a passo para fazer queijo em casa e saiba mais sobre maturação - 20/02/2015 - Comida - Folha de S.Paulo</a></li>
+<li><a href="https://www.home-barista.com/espresso-guide-diagnose-extraction-problems.html">Diagnosing Espresso Extraction Problems - Espresso Guide • Home-Barista.com</a></li>
+<li><a href="http://luckypeach.com/recipes/fresh-alkaline-noodes/">Homemade Ramen Noodles | Lucky Peach</a></li>
+<li><a href="http://www.cervejacapitu.com.br/fazendo-malte-caseiro-com-a-capitu">Fazendo Malte caseiro com a Capitu</a></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org35afacd" class="outline-3">
+<h3 id="org35afacd"><span class="section-number-3">1.8</span> Estatística, R, IBGE etc</h3>
+<div class="outline-text-3" id="text-1-8">
+<ul class="org-ul">
+<li><a href="https://ww2.ibge.gov.br/apps/monitoramento_cobertura_uso_terra/v1/">Cobertura e Uso da Terra</a></li>
+<li><a href="http://bi.mte.gov.br/bgcaged/inicial.php">bi.mte.gov.br/bgcaged/inicial.php</a></li>
+<li><a href="http://www.sthda.com/english/articles/31-principal-component-methods-in-r-practical-guide/114-mca-multiple-correspondence-analysis-in-r-essentials/">Visualização MCA</a></li>
+<li><a href="http://factominer.free.fr/question/FAQ.html">FactoMineR FAQ</a></li>
+<li><a href="https://landsatlook.usgs.gov/viewer.html">LandsatLook</a></li>
+<li><a href="https://git-scm.com/book/pt-br/v1/Primeiros-passos">https://git-scm.com/book/pt-br/v1/Primeiros-passos</a></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org3f300f6" class="outline-3">
+<h3 id="org3f300f6"><span class="section-number-3">1.9</span> Diversos</h3>
+<div class="outline-text-3" id="text-1-9">
+<ul class="org-ul">
+<li><a href="https://nacoesunidas.org/pos2015/">17 Objetivos para transformar nosso mundo | ONU Brasil</a></li>
+<li><a href="http://www.dw.com/pt-br/como-obter-a-cidadania-alem%C3%A3/g-19297105">Como obter a cidadania alemã | Todo o conteúdo | DW.COM | 02.06.2016</a></li>
+<li><a href="http://www.lemans.org/en">ACO - Automobile Club de l&amp;#39;Ouest Le Mans</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgfb89225" class="outline-3">
+<h3 id="orgfb89225"><span class="section-number-3">1.10</span> Programação, desenvolvimento, computação etc</h3>
+<div class="outline-text-3" id="text-1-10">
+<ul class="org-ul">
+<li><a href="https://www.fsf.org/">https://www.fsf.org/</a></li>
+<li><a href="https://www.gnu.org/">https://www.gnu.org/</a></li>
+<li><a href="https://rextester.com/l/pascal_online_compiler">https://rextester.com/l/pascal_online_compiler</a></li>
+<li><a href="https://github.com/josephmisiti/awesome-machine-learning">https://github.com/josephmisiti/awesome-machine-learning</a></li>
+<li><a href="http://ergoemacs.org/emacs/elisp.html">http://ergoemacs.org/emacs/elisp.html</a></li>
+<li><a href="https://www.gnu.org/software/emacs/manual/html_node/elisp/Writing-Emacs-Primitives.html">https://www.gnu.org/software/emacs/manual/html_node/elisp/Writing-Emacs-Primitives.html</a></li>
+<li>Redes Neurais John Bullinaria
+<ul class="org-ul">
+<li><a href="http://www.cs.bham.ac.uk/~jxb/inc.html">http://www.cs.bham.ac.uk/~jxb/inc.html</a></li>
+<li><a href="http://www.cs.bham.ac.uk/~jxb/INC/nn.html">http://www.cs.bham.ac.uk/~jxb/INC/nn.html</a></li>
+</ul></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="author">Author: pseifer</p>
+<p class="date">Created: 2019-05-30 qui 22:21</p>
+<p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>
