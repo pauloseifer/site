@@ -1,26 +1,25 @@
 import xml.etree.cElementTree as ET
 
-
-
 root = ET.Element("Bookmark")
+arquivo = input("Arquivo: ")
 
+arq = open(arquivo, "r")
 
-doc = ET.SubElement(root, "doc")
-doc.set("name", "Hum")
-dec = ET.SubElement(doc, "dec")
-ET.SubElement(dec, "field1", name="href").text = "http://oi"
-ET.SubElement(dec, "field2", name="descricao").text = "nada"
-
-doc = ET.SubElement(root, "doc")
-doc.set("name", "Dois")
-dec = ET.SubElement(doc, "dec")
-ET.SubElement(dec, "field1", name="href").text = "http://oi2"
-ET.SubElement(dec, "field2", name="descricao").text = "nada2"
-ET.SubElement(dec, "field1", name="href").text = "http://oi2"
-ET.SubElement(dec, "field2", name="descricao").text = "nada2"
+for linha in arq:
+    if linha.find("Grupo = ") == 0:
+        Grupo = ET.SubElement(root, "Grupo")
+        Grupo.set("name", linha[len("Grupo = "):])   
+    if linha.find("href = ") == 0:
+        site = ET.SubElement(Grupo, "site")
+        ET.SubElement(site, "field1", name = "href").text = linha[len("href = "):]
+    if linha.find("descricao = ") == 0:
+        ET.SubElement(site, "field2", name = "descricao").text = linha[len("descricao = "):]
 
 tree = ET.ElementTree(root)
 tree.write("teste.xml")
+
+arq.close()
+
 
 
 
