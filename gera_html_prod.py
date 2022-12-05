@@ -18,12 +18,12 @@ print("</head>")
 print("<body>")
 
 for child in root:
-    print("<h1>" + child.get("name") + "</h1>")
+    print("<h1><font face='Montserrat Light'>" + child.get("name") + "</font></h1>")
     
     for child2 in child:
         site = child2.find("field1").text
         descricao = child2.find("field2").text
-        print("<a href=" + site + ">" + descricao + "</a><br>")
+        print("<a href=" + site + "><font face='Montserrat Light'>" + descricao + "</font></a><br>")
         
 print("</body>")
 print("</html>")
