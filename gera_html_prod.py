@@ -1,21 +1,7 @@
 #! /usr/bin/env python3
 
-import xml.etree.cElementTree as ET
 import cgi 
-
-
-tree = ET.parse("../htdocs/bookmark.xml")
-
-root = tree.getroot()
-
-lista = []
-idgrupo = []
-
-for filho in root:
-    lista.append(filho.attrib["name"])
-    idgrupo.append(filho.attrib["id"])
-lista.append("Nova categoria")
-idgrupo.append("GRX")
+import json
 
 print("Content-type: text/html\n\n")
 print("<!DOCTYPE html>")
@@ -32,6 +18,7 @@ print("</style>")
 print("</head>")
 print("<body>")
 print("<script language='Javascript'>")
+
 print("  function Pergunta_Grupo() {")
 print("      var selecao = document.getElementById('Grupo_Selecao')")
 print("      if (selecao.value == 'GRX') {")
@@ -51,6 +38,15 @@ print("     <div id='NC'></div>\\")
 print("        <input type=submit value=Atualiza>\\")
 print("     <div id='res_atualizacao'></div>\\")
 print("   </form>\"")
+print("   grupos = document.querySelectorAll('[tipo=\"Grupo\"]');")
+print("   IdGrp = [];")
+print("   Grp = [];")
+print("  for (var i = 0; i < grupos.length; i++){")
+print("     IdGrp.push(grupos[i].getAttribute(\"grupo\"));")
+print("     Grp.push(grupos[i].innerHTML);")
+print("   } ")
+print("   IdGrp.push(\"GRX\");")
+print("   Grp.push(\"Novo grupo\");")
 print("   var selecao = document.getElementById(\"Grupo_Selecao\");")
 print("   for (var i = 0; i < IdGrp.length; i++) {")
 print("     var opcao = document.createElement(\"option\");")
@@ -148,16 +144,12 @@ print("<h1>Bookmark</h1>")
 print("<div id=\"E_Atualizacao\"><input type=\"button\" value=\"Atualizar o Bookmark?\" onclick=\"Javascript:expande_atualizacao()\"></div>")
 
 print("<div id=\"Excluir\"><input type=\"button\" value=\"Excluir entrada no Bookmark?\" onclick='Javascript:chama_funcao(\"Sel_Excluir\")'></div>")
-
-print("<script>")
-print("const IdGrp = [];")
-print("const Grp = [];")
-for j, i in zip(idgrupo, lista):
-    print("IdGrp.push(\"" + j + "\");")
-    print("Grp.push(\"" + i + "\");")
-print("</script>")
-
 print("<div id='corpo'><script>chama_funcao(\"bookmark\")</script></div>")
+
+print("<br>")
+print("<br>")
+print("<br>")
+print("<a href=\"/bookmark.json\" download>Bookmark</a>")
         
 print("</body>")
 print("</html>")

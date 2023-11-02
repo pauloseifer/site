@@ -1,350 +1,258 @@
 {
-    "Descrição = ": "Registro de sites interessantes e temporários",
-    "Autor = ": "Paulo Seifer",
-    "Última atualização": "19/01/2023 17:28:36",
-    "GR_1": {
-        "Grupo": "Geral",
-        "GR_1_1": {
-            "site": "http://orgmode.org/orgcard.txt\n",
-            "descrição": "http://orgmode.org/orgcard.txt\n"
-        },
-        "GR_1_2": {
-            "site": "https://orgmode.org/worg/org-glossary.html\n",
-            "descrição": "https://orgmode.org/worg/org-glossary.html\n"
-        },
-        "GR_1_3": {
-            "site": "https://www.debuggex.com/\n",
-            "descrição": "Debuga Regex\n"
-        }
-    },
-    "GR_2": {
-        "Grupo": "Energia, desenvolvimento",
-        "GR_2_1": {
-            "site": "https://www.sciencedirect.com/journal/energy-research-and-social-science/\n",
-            "descrição": "Energy Research and Social Science Journal\n"
-        },
-        "GR_2_2": {
-            "site": "https://onlinelibrary.wiley.com/journal/14677660\n",
-            "descrição": "Development and Social Change Journal\n"
-        },
-        "GR_2_3": {
-            "site": "http://energy.mit.edu/\n",
-            "descrição": "http://energy.mit.edu/\n"
-        },
-        "GR_2_4": {
-            "site": "https://www.energiaecomunidades.com.br/",
-            "descrição": "Rede Energia e Comunidades"
-        }
-    },
-    "GR_3": {
-        "Grupo": "Jornais, revistas etc",
-        "GR_3_1": {
-            "site": "https://www.atlasobscura.com/\n",
-            "descrição": "https://www.atlasobscura.com/\n"
-        },
-        "GR_3_2": {
-            "site": "https://arstechnica.com/\n",
-            "descrição": "https://arstechnica.com/\n"
-        },
-        "GR_3_3": {
-            "site": "http://science.sciencemag.org/\n",
-            "descrição": "http://science.sciencemag.org/\n"
-        },
-        "GR_3_4": {
-            "site": "http://pagina22.com.br/\n",
-            "descrição": "http://pagina22.com.br/\n"
-        },
-        "GR_3_5": {
-            "site": "http://www.p22on.com.br/\n",
-            "descrição": "http://www.p22on.com.br/\n"
-        },
-        "GR_3_6": {
-            "site": "https://www.nationalgeographicbrasil.com/\n",
-            "descrição": "https://www.nationalgeographicbrasil.com/\n"
-        },
-        "GR_3_7": {
-            "site": "https://www.nationalgeographic.com/\n",
-            "descrição": "https://www.nationalgeographic.com/\n"
-        }
-    },
-    "GR_4": {
-        "Grupo": "História, ciências etc",
-        "GR_4_1": {
-            "site": "https://www.coase.org/niereadinglist.htm\n",
-            "descrição": "New Institutional Economics: Reading List, Introductory\n"
-        },
-        "GR_4_2": {
-            "site": "https://colunastortas.wordpress.com/2015/08/03/pierre-bourdieu-download/#bourdieu3\n",
-            "descrição": "18 livros de Pierre Bourdieu para download gratuito + 21 artigos sobre sua obra | Colunas Tortas\n"
-        },
-        "GR_4_3": {
-            "site": "http://revistacult.uol.com.br/home/2010/03/pequeno-glossario-da-teoria-de-bourdieu/\n",
-            "descrição": "Revista Cult Pequeno glossário da teoria de Bourdieu - Revista Cult\n"
-        },
-        "GR_4_4": {
-            "site": "http://www.liber.ufpe.br/teses/arquivo/20041028135821.pdf\n",
-            "descrição": "Posseiros, rendeiros e proprietários: estrutura fundiária e dinâmica agro-mercantil no alto sertão da bahia (1750-1850)\n"
-        },
-        "GR_4_5": {
-            "site": "http://memoria.bn.br/hdb/periodico.aspx\n",
-            "descrição": "::: BIBLIOTECA NACIONAL - Hemeroteca Digital Brasileira:::\n"
-        },
-        "GR_4_6": {
-            "site": "http://visual-memory.co.uk/daniel/Documents/S4B/semiotic.html\n",
-            "descrição": "Semiotics for Beginners by Daniel Chandler\n"
-        }
-    },
-    "GR_5": {
-        "Grupo": "Carpintaria, artesanato, trabalho manual etc",
-        "GR_5_1": {
-            "site": "http://www.artofmanliness.com/2016/01/21/how-to-restore-a-vintageantique-pocket-knife/\n",
-            "descrição": "How To Clean Restore A Vintage Pocketknife | The Art Of Manliness\n"
-        },
-        "GR_5_2": {
-            "site": "http://www.tameshigiri.ca/2014/06/03/cord-rope-and-combat/\n",
-            "descrição": "Cord, rope and combat | Tameshigiri.ca\n"
-        },
-        "GR_5_3": {
-            "site": "http://nova.astrometry.net/\n",
-            "descrição": "Astrometry.net\n"
-        },
-        "GR_5_4": {
-            "site": "http://darksitefinder.com/maps/world.html\n",
-            "descrição": "DarkSiteFinder.com - Light Pollution Map\n"
-        }
-    },
-    "GR_6": {
-        "Grupo": "Imagem, vídeo, filmes, séries etc",
-        "GR_6_1": {
-            "site": "http://www.cambridgeincolour.com/\n",
-            "descrição": "Cambridge in Colour - Photography Tutorials Learning Community\n"
-        },
-        "GR_6_2": {
-            "site": "http://filmescult.com.br/akira-kurosawa/\n",
-            "descrição": "Akira Kurosawa - Filmografia | Download\n"
-        },
-        "GR_6_3": {
-            "site": "http://www.outerplaces.com/star-wars-timeline/\n",
-            "descrição": "Star Wars Timeline | Outer Places\n"
-        },
-        "GR_6_4": {
-            "site": "https://www.sofilmestorrent.com/baixar-supernatural-14a-temporada-2018-dublado-legendado-download/\n",
-            "descrição": "https://www.sofilmestorrent.com/baixar-supernatural-14a-temporada-2018-dublado-legendado-download/\n"
-        },
-        "GR_6_5": {
-            "site": "https://murodoclassicrock4.blogspot.com/\n",
-            "descrição": "https://murodoclassicrock4.blogspot.com/\n"
-        }
-    },
-    "GR_7": {
-        "Grupo": "Pão, café etc",
-        "GR_7_1": {
-            "site": "http://www.thefreshloaf.com/handbook/poolish-baguettes\n",
-            "descrição": "Poolish Baguettes | The Fresh Loaf\n"
-        },
-        "GR_7_2": {
-            "site": "http://www1.folha.uol.com.br/comida/2015/02/1591778-veja-o-passo-a-passo-para-fazer-queijo-em-casa-e-saiba-mais-sobre-maturacao.shtml\n",
-            "descrição": "Veja o passo a passo para fazer queijo em casa e saiba mais sobre maturação - 20/02/2015 - Comida - Folha de S.Paulo\n"
-        },
-        "GR_7_3": {
-            "site": "https://www.home-barista.com/espresso-guide-diagnose-extraction-problems.html\n",
-            "descrição": "Diagnosing Espresso Extraction Problems - Espresso Guide Home-Barista.com\n"
-        },
-        "GR_7_4": {
-            "site": "http://luckypeach.com/recipes/fresh-alkaline-noodes/\n",
-            "descrição": "Homemade Ramen Noodles | Lucky Peach\n"
-        },
-        "GR_7_5": {
-            "site": "http://www.cervejacapitu.com.br/fazendo-malte-caseiro-com-a-capitu\n",
-            "descrição": "Fazendo Malte caseiro com a Capitu\n"
-        },
-        "GR_7_6": {
-            "site": "https://www.espressoparts.com/blogs/barista-basics-tutorials/cleaning-boiler",
-            "descrição": "https://www.espressoparts.com/blogs/barista-basics-tutorials/cleaning-boiler"
-        }
-    },
-    "GR_8": {
-        "Grupo": "Estatística, R, IBGE etc",
-        "GR_8_1": {
-            "site": "https://ww2.ibge.gov.br/apps/monitoramento_cobertura_uso_terra/v1/\n",
-            "descrição": "Cobertura e Uso da Terra\n"
-        },
-        "GR_8_2": {
-            "site": "http://bi.mte.gov.br/bgcaged/inicial.php\n",
-            "descrição": "bi.mte.gov.br/bgcaged/inicial.php\n"
-        },
-        "GR_8_3": {
-            "site": "http://www.sthda.com/english/articles/31-principal-component-methods-in-r-practical-guide/114-mca-multiple-correspondence-analysis-in-r-essentials/\n",
-            "descrição": "Visualização MCA\n"
-        },
-        "GR_8_4": {
-            "site": "http://factominer.free.fr/question/FAQ.html\n",
-            "descrição": "FactoMineR FAQ\n"
-        },
-        "GR_8_5": {
-            "site": "https://landsatlook.usgs.gov/viewer.html\n",
-            "descrição": "LandsatLook\n"
-        },
-        "GR_8_6": {
-            "site": "https://git-scm.com/book/pt-br/v1/Primeiros-passos\n",
-            "descrição": "https://git-scm.com/book/pt-br/v1/Primeiros-passos\n"
-        }
-    },
-    "GR_9": {
-        "Grupo": "Diversos",
-        "GR_9_1": {
-            "site": "https://nacoesunidas.org/pos2015/\n",
-            "descrição": "17 Objetivos para transformar nosso mundo | ONU Brasil\n"
-        },
-        "GR_9_2": {
-            "site": "http://www.dw.com/pt-br/como-obter-a-cidadania-alem%C3%A3/g-19297105\n",
-            "descrição": "Como obter a cidadania alemã | Todo o conteúdo | DW.COM | 02.06.2016\n"
-        },
-        "GR_9_3": {
-            "site": "http://www.lemans.org/en\n",
-            "descrição": "ACO - Automobile Club de le Ouest Le Mans\n"
-        }
-    },
-    "GR_10": {
-        "Grupo": "Programação, desenvolvimento, computação etc",
-        "GR_10_1": {
-            "site": "https://www.fsf.org/\n",
-            "descrição": "https://www.fsf.org/\n"
-        },
-        "GR_10_2": {
-            "site": "https://www.gnu.org/\n",
-            "descrição": "https://www.gnu.org/\n"
-        },
-        "GR_10_3": {
-            "site": "https://rextester.com/l/pascal_online_compiler\n",
-            "descrição": "https://rextester.com/l/pascal_online_compiler\n"
-        },
-        "GR_10_4": {
-            "site": "https://github.com/josephmisiti/awesome-machine-learning\n",
-            "descrição": "https://github.com/josephmisiti/awesome-machine-learning\n"
-        },
-        "GR_10_5": {
-            "site": "http://ergoemacs.org/emacs/elisp.html\n",
-            "descrição": "http://ergoemacs.org/emacs/elisp.html\n"
-        },
-        "GR_10_6": {
-            "site": "https://www.gnu.org/software/emacs/manual/html_node/elisp/Writing-Emacs-Primitives.html\n",
-            "descrição": "https://www.gnu.org/software/emacs/manual/html_node/elisp/Writing-Emacs-Primitives.html\n"
-        },
-        "GR_10_7": {
-            "site": "http://www.cs.bham.ac.uk/~jxb/inc.html\n",
-            "descrição": "http://www.cs.bham.ac.uk/~jxb/inc.html\n"
-        },
-        "GR_10_8": {
-            "site": "http://www.cs.bham.ac.uk/~jxb/INC/nn.html\n",
-            "descrição": "http://www.cs.bham.ac.uk/~jxb/INC/nn.html\n"
-        }
-    },
-    "GR_11": {
-        "Grupo": "tmp",
-        "GR_11_1": {
-            "site": "https://wiki.lineageos.org/devices/payton/install",
-            "descrição": "https://wiki.lineageos.org/devices/payton/install"
-        },
-        "GR_11_2": {
-            "site": "https://developer.android.com/guide/topics/connectivity/usb/host#java",
-            "descrição": "USB Android "
-        },
-        "GR_11_3": {
-            "site": "http://www.linux-usb.org/",
-            "descrição": "USB Linux"
-        },
-        "GR_11_4": {
-            "site": "https://yosemitefoothills.com/Electronics/super-simple-sio-demo.c",
-            "descrição": "USB Linux 2"
-        },
-        "GR_11_5": {
-            "site": "https://www.cs.cmu.edu/afs/cs/academic/class/15492-f07/www/pthreads.html",
-            "descrição": "Threads Linux"
-        },
-        "GR_11_6": {
-            "site": "https://www.sebrae.com.br/sites/PortalSebrae/artigos/como-construir-um-modelo-de-negocio-para-sua-empresa,6054fd560530d410VgnVCM1000003b74010aRCRD",
-            "descrição": "https://www.sebrae.com.br/sites/PortalSebrae/artigos/como-construir-um-modelo-de-negocio-para-sua-empresa,6054fd560530d410VgnVCM1000003b74010aRCRD"
-        },
-        "GR_11_7": {
-            "site": "https://help.libreoffice.org/latest/en-US/text/sbasic/python/main0000.html",
-            "descrição": "Help de Scripts em Python para LibreOffice"
-        },
-        "GR_11_8": {
-            "site": "https://wiki.documentfoundation.org/Macros/Python_Guide/Calc/Calc_sheets",
-            "descrição": "Wiki para Macros no LibreOffice"
-        },
-        "GR_11_9": {
-            "site": "https://fia.com.br/blog/scrum/amp/",
-            "descrição": "https://fia.com.br/blog/scrum/amp/"
-        },
-        "GR_11_10": {
-            "site": "https://wiki.documentfoundation.org/Documentation/DevGuide/Scripting_Framework#:~:text=Macro%20Recording%20is%20only%20supported,API%20resources%20for%20elaborate%20programming.",
-            "descrição": "https://wiki.documentfoundation.org/Documentation/DevGuide/Scripting_Framework#:~:text=Macro%20Recording%20is%20only%20supported,API%20resources%20for%20elaborate%20programming."
-        },
-        "GR_11_11": {
-            "site": "https://api.libreoffice.org/",
-            "descrição": "https://api.libreoffice.org/"
-        },
-        "GR_11_12": {
-            "site": "https://learnxinyminutes.com/docs/elisp/",
-            "descrição": "https://learnxinyminutes.com/docs/elisp/"
-        },
-        "GR_11_13": {
-            "site": "https://orgmode.org/manual/Command-and-Function-Index.html",
-            "descrição": "https://orgmode.org/manual/Command-and-Function-Index.html"
-        },
-        "GR_11_14": {
-            "site": "https://www.capitalreset.com/cvm-cria-regras-para-fundos-de-carbono-e-rotulagem-esg/amp/",
-            "descrição": "https://www.capitalreset.com/cvm-cria-regras-para-fundos-de-carbono-e-rotulagem-esg/amp/"
-        },
-        "GR_11_15": {
-            "site": "https://www.secovi.com.br/noticias/abnt-lanca-norma-abnt-pr-2030-esg/15894",
-            "descrição": "https://www.secovi.com.br/noticias/abnt-lanca-norma-abnt-pr-2030-esg/15894"
-        },
-        "GR_11_16": {
-            "site": "https://www.infomoney.com.br/negocios/banco-mundial-e-bb-bbas3-criam-balcao-unico-para-credito-de-carbono/amp/",
-            "descrição": "https://www.infomoney.com.br/negocios/banco-mundial-e-bb-bbas3-criam-balcao-unico-para-credito-de-carbono/amp/"
-        },
-        "GR_11_17": {
-            "site": "https://olhardigital.com.br/2022/12/29/carros-e-tecnologia/carro-eletrico-movido-a-agua-possui-autonomia-invejavel/amp/",
-            "descrição": "https://olhardigital.com.br/2022/12/29/carros-e-tecnologia/carro-eletrico-movido-a-agua-possui-autonomia-invejavel/amp/"
-        },
-        "GR_11_18": {
-            "site": "https://interestingengineering.com/innovation/mits-zero-electricity-cooling-system",
-            "descrição": "https://interestingengineering.com/innovation/mits-zero-electricity-cooling-system"
-        },
-        "GR_11_19": {
-            "site": "https://exame.com/esferabrasil/saiba-qual-empresa-brasileira-tem-nota-maxima-em-ranking-de-praticas-esg-2/amp/",
-            "descrição": "https://exame.com/esferabrasil/saiba-qual-empresa-brasileira-tem-nota-maxima-em-ranking-de-praticas-esg-2/amp/"
-        },
-        "GR_11_20": {
-            "site": "https://exame.com/esg/ise-b3-indice-de-sustentabilidade-empresarial-tem-recorde-de-participantes/amp/",
-            "descrição": "https://exame.com/esg/ise-b3-indice-de-sustentabilidade-empresarial-tem-recorde-de-participantes/amp/"
-        },
-        "GR_11_21": {
-            "site": "https://exame.com/esg/91-dos-investidores-brasileiros-acham-que-relatorios-podem-ter-greenwashing-afirma-pwc/amp/",
-            "descrição": "https://exame.com/esg/91-dos-investidores-brasileiros-acham-que-relatorios-podem-ter-greenwashing-afirma-pwc/amp/"
-        },
-        "GR_11_22": {
-            "site": "https://www.bbc.com/portuguese/geral-64172834.amp",
-            "descrição": "https://www.bbc.com/portuguese/geral-64172834.amp"
-        },
-        "GR_11_23": {
-            "site": "https://www.vice.com/amp/en/article/pkg95v/a-total-amateur-may-have-just-rewritten-human-history-with-bombshell-discovery",
-            "descrição": "https://www.vice.com/amp/en/article/pkg95v/a-total-amateur-may-have-just-rewritten-human-history-with-bombshell-discovery"
-        },
-        "GR_11_24": {
-            "site": "https://www-moneytimes-com-br.cdn.ampproject.org/v/s/www.moneytimes.com.br/petroleo-branco-uma-das-oportunidades-da-decada/amp/?amp_gsa=1&amp_js_v=a9&usqp=mq331AQIKAGwASCAAgM%3D#amp_tf=De%20%251%24s&aoh=16731166393464&csi=0&referrer=https%3A%2F%2Fwww.google.com&ampshare=https%3A%2F%2Fwww.moneytimes.com.br%2Fpetroleo-branco-uma-das-oportunidades-da-decada%2F",
-            "descrição": "https://www-moneytimes-com-br.cdn.ampproject.org/v/s/www.moneytimes.com.br/petroleo-branco-uma-das-oportunidades-da-decada/amp/?amp_gsa=1&amp_js_v=a9&usqp=mq331AQIKAGwASCAAgM%3D#amp_tf=De%20%251%24s&aoh=16731166393464&csi=0&referrer=https%3A%2F%2Fwww.google.com&ampshare=https%3A%2F%2Fwww.moneytimes.com.br%2Fpetroleo-branco-uma-das-oportunidades-da-decada%2F"
-        },
-        "GR_11_25": {
-            "site": "https://www.sebrae.com.br/sites/PortalSebrae/ufs/pb/artigos/aprenda-sobre-o-quadro-lean-canvas-e-comece-sua-startup,08c7190f394c9610VgnVCM1000004c00210aRCRD",
-            "descrição": "https://www.sebrae.com.br/sites/PortalSebrae/ufs/pb/artigos/aprenda-sobre-o-quadro-lean-canvas-e-comece-sua-startup,08c7190f394c9610VgnVCM1000004c00210aRCRD"
-        },
-        "GR_11_26": {
-            "site": "https://neofeed.com.br/blog/home/todos-contra-larry-fink-o-ceo-da-blackrock-na-mira-da-polarizacao-em-torno-do-esg/",
-            "descrição": "https://neofeed.com.br/blog/home/todos-contra-larry-fink-o-ceo-da-blackrock-na-mira-da-polarizacao-em-torno-do-esg/"
-        }
-    }
+   "Descrição = ": "Registro de sites interessantes e temporários",
+   "Autor = ": "Paulo Seifer",
+   "Última atualização": "26/10/2023 23:04:00",
+   "GR_1": {
+      "Grupo": "Geral",
+      "GR_1_1": {
+         "site": "http://orgmode.org/orgcard.txt",
+         "descrição": "http://orgmode.org/orgcard.txt"
+      },
+      "GR_1_2": {
+         "site": "https://orgmode.org/worg/org-glossary.html",
+         "descrição": "https://orgmode.org/worg/org-glossary.html"
+      },
+      "GR_1_3": {
+         "site": "https://www.debuggex.com/",
+         "descrição": "Debuga Regex"
+      }
+   },
+   "GR_2": {
+      "Grupo": "Energia, desenvolvimento",
+      "GR_2_1": {
+         "site": "https://www.sciencedirect.com/journal/energy-research-and-social-science/",
+         "descrição": "Energy Research and Social Science Journal"
+      },
+      "GR_2_2": {
+         "site": "https://onlinelibrary.wiley.com/journal/14677660",
+         "descrição": "Development and Social Change Journal"
+      },
+      "GR_2_3": {
+         "site": "http://energy.mit.edu/",
+         "descrição": "http://energy.mit.edu/"
+      },
+      "GR_2_4": {
+         "site": "https://www.energiaecomunidades.com.br/",
+         "descrição": "Rede Energia e Comunidades"
+      },
+      "GR_2_5": {
+         "site": "https://www.agenciainfra.com/",
+         "descrição": "https://www.agenciainfra.com/"
+      },
+      "GR_2_6": {
+         "site": "https://www.ibama.gov.br/component/legislacao/?view=legislacao&legislacao=133565",
+         "descrição": "Resolução Conama 462, de 24 de julho de 2014"
+      }
+   },
+   "GR_3": {
+      "Grupo": "Jornais, revistas etc",
+      "GR_3_1": {
+         "site": "https://www.atlasobscura.com/",
+         "descrição": "https://www.atlasobscura.com/"
+      },
+      "GR_3_2": {
+         "site": "https://arstechnica.com/",
+         "descrição": "https://arstechnica.com/"
+      },
+      "GR_3_3": {
+         "site": "http://science.sciencemag.org/",
+         "descrição": "http://science.sciencemag.org/"
+      },
+      "GR_3_4": {
+         "site": "http://pagina22.com.br/",
+         "descrição": "http://pagina22.com.br/"
+      },
+      "GR_3_5": {
+         "site": "http://www.p22on.com.br/",
+         "descrição": "http://www.p22on.com.br/"
+      },
+      "GR_3_6": {
+         "site": "https://www.nationalgeographicbrasil.com/",
+         "descrição": "https://www.nationalgeographicbrasil.com/"
+      },
+      "GR_3_7": {
+         "site": "https://www.nationalgeographic.com/",
+         "descrição": "https://www.nationalgeographic.com/"
+      }
+   },
+   "GR_4": {
+      "Grupo": "História, ciências etc",
+      "GR_4_1": {
+         "site": "https://www.coase.org/niereadinglist.htm",
+         "descrição": "New Institutional Economics: Reading List, Introductory"
+      },
+      "GR_4_2": {
+         "site": "https://colunastortas.wordpress.com/2015/08/03/pierre-bourdieu-download/#bourdieu3",
+         "descrição": "18 livros de Pierre Bourdieu para download gratuito + 21 artigos sobre sua obra | Colunas Tortas"
+      },
+      "GR_4_3": {
+         "site": "http://www.liber.ufpe.br/teses/arquivo/20041028135821.pdf",
+         "descrição": "Posseiros, rendeiros e proprietários: estrutura fundiária e dinâmica agro-mercantil no alto sertão da bahia (1750-1850)"
+      },
+      "GR_4_4": {
+         "site": "http://memoria.bn.br/hdb/periodico.aspx",
+         "descrição": "::: BIBLIOTECA NACIONAL - Hemeroteca Digital Brasileira:::"
+      },
+      "GR_4_5": {
+         "site": "http://visual-memory.co.uk/daniel/Documents/S4B/semiotic.html",
+         "descrição": "Semiotics for Beginners by Daniel Chandler"
+      },
+      "GR_4_6": {
+         "site": "https://www.historyoftechnology.org/",
+         "descrição": "Society for the History of Technology"
+      }
+   },
+   "GR_5": {
+      "Grupo": "Carpintaria, artesanato, trabalho manual etc",
+      "GR_5_1": {
+         "site": "http://www.artofmanliness.com/2016/01/21/how-to-restore-a-vintageantique-pocket-knife/",
+         "descrição": "How To Clean Restore A Vintage Pocketknife | The Art Of Manliness"
+      },
+      "GR_5_2": {
+         "site": "http://www.tameshigiri.ca/2014/06/03/cord-rope-and-combat/",
+         "descrição": "Cord, rope and combat | Tameshigiri.ca"
+      },
+      "GR_5_3": {
+         "site": "http://nova.astrometry.net/",
+         "descrição": "Astrometry.net"
+      },
+      "GR_5_4": {
+         "site": "http://darksitefinder.com/maps/world.html",
+         "descrição": "DarkSiteFinder.com - Light Pollution Map"
+      }
+   },
+   "GR_6": {
+      "Grupo": "Imagem, vídeo, filmes, séries etc",
+      "GR_6_1": {
+         "site": "http://www.cambridgeincolour.com/",
+         "descrição": "Cambridge in Colour - Photography Tutorials Learning Community"
+      }
+   },
+   "GR_7": {
+      "Grupo": "Pão, café etc",
+      "GR_7_1": {
+         "site": "http://www.thefreshloaf.com/handbook/poolish-baguettes",
+         "descrição": "Poolish Baguettes | The Fresh Loaf"
+      },
+      "GR_7_2": {
+         "site": "https://www.home-barista.com/espresso-guide-diagnose-extraction-problems.html",
+         "descrição": "Diagnosing Espresso Extraction Problems - Espresso Guide Home-Barista.com"
+      },
+      "GR_7_3": {
+         "site": "http://www.cervejacapitu.com.br/fazendo-malte-caseiro-com-a-capitu",
+         "descrição": "Fazendo Malte caseiro com a Capitu"
+      },
+      "GR_7_4": {
+         "site": "https://www.espressoparts.com/blogs/barista-basics-tutorials/cleaning-boiler",
+         "descrição": "https://www.espressoparts.com/blogs/barista-basics-tutorials/cleaning-boiler"
+      }
+   },
+   "GR_8": {
+      "Grupo": "Estatística, R, IBGE etc",
+      "GR_8_1": {
+         "site": "https://ww2.ibge.gov.br/apps/monitoramento_cobertura_uso_terra/v1/",
+         "descrição": "Cobertura e Uso da Terra"
+      },
+      "GR_8_2": {
+         "site": "http://bi.mte.gov.br/bgcaged/inicial.php",
+         "descrição": "bi.mte.gov.br/bgcaged/inicial.php"
+      },
+      "GR_8_3": {
+         "site": "http://www.sthda.com/english/articles/31-principal-component-methods-in-r-practical-guide/114-mca-multiple-correspondence-analysis-in-r-essentials/",
+         "descrição": "Visualização MCA"
+      },
+      "GR_8_4": {
+         "site": "http://factominer.free.fr/question/FAQ.html",
+         "descrição": "FactoMineR FAQ"
+      },
+      "GR_8_5": {
+         "site": "https://landsatlook.usgs.gov/viewer.html",
+         "descrição": "LandsatLook"
+      },
+      "GR_8_6": {
+         "site": "https://dados.gov.br/dados/organizacoes/visualizar/ministerio-do-desenvolvimento-social-mds",
+         "descrição": "Cadúnico e outros dados do MDS"
+      },
+      "GR_8_7": {
+         "site": "https://www.car.gov.br/publico/imoveis/index",
+         "descrição": "Base CAR"
+      },
+      "GR_8_8": {
+         "site": "http://comexstat.mdic.gov.br/pt/municipio",
+         "descrição": "Comércio exterior"
+      },
+      "GR_8_9": {
+         "site": "https://www.gov.br/produtividade-e-comercio-exterior/pt-br/assuntos/comercio-exterior/estatisticas/base-de-dados-bruta",
+         "descrição": " Comércio Exterior"
+      }
+   },
+   "GR_9": {
+      "Grupo": "Diversos",
+      "GR_9_1": {
+         "site": "https://nacoesunidas.org/pos2015/",
+         "descrição": "17 Objetivos para transformar nosso mundo | ONU Brasil"
+      },
+      "GR_9_2": {
+         "site": "http://www.dw.com/pt-br/como-obter-a-cidadania-alem%C3%A3/g-19297105",
+         "descrição": "Como obter a cidadania alemã | Todo o conteúdo | DW.COM | 02.06.2016"
+      },
+      "GR_9_3": {
+         "site": "http://www.lemans.org/en",
+         "descrição": "ACO - Automobile Club de le Ouest Le Mans"
+      }
+   },
+   "GR_10": {
+      "Grupo": "Programação, desenvolvimento, computação etc",
+      "GR_10_1": {
+         "site": "https://www.fsf.org/",
+         "descrição": "https://www.fsf.org/"
+      },
+      "GR_10_2": {
+         "site": "https://www.gnu.org/",
+         "descrição": "https://www.gnu.org/"
+      },
+      "GR_10_3": {
+         "site": "https://rextester.com/l/pascal_online_compiler",
+         "descrição": "https://rextester.com/l/pascal_online_compiler"
+      },
+      "GR_10_4": {
+         "site": "https://github.com/josephmisiti/awesome-machine-learning",
+         "descrição": "https://github.com/josephmisiti/awesome-machine-learning"
+      },
+      "GR_10_5": {
+         "site": "https://www.gnu.org/software/emacs/manual/html_node/elisp/Writing-Emacs-Primitives.html",
+         "descrição": "https://www.gnu.org/software/emacs/manual/html_node/elisp/Writing-Emacs-Primitives.html"
+      },
+      "GR_10_6": {
+         "site": "http://www.cs.bham.ac.uk/~jxb/inc.html",
+         "descrição": "http://www.cs.bham.ac.uk/~jxb/inc.html"
+      },
+      "GR_10_7": {
+         "site": "http://www.cs.bham.ac.uk/~jxb/INC/nn.html",
+         "descrição": "http://www.cs.bham.ac.uk/~jxb/INC/nn.html"
+      },
+      "GR_10_8": {
+         "site": "https://orgmode.org/manual/Command-and-Function-Index.html",
+         "descrição": "https://orgmode.org/manual/Command-and-Function-Index.html"
+      },
+      "GR_10_9": {
+         "site": "https://api.libreoffice.org/",
+         "descrição": "https://api.libreoffice.org/"
+      },
+      "GR_10_10": {
+         "site": "https://wiki.documentfoundation.org/Macros/Python_Guide/Calc/Calc_sheets",
+         "descrição": "https://wiki.documentfoundation.org/Macros/Python_Guide/Calc/Calc_sheets"
+      },
+      "GR_10_11": {
+         "site": "http://xahlee.info/emacs/emacs/elisp.html",
+         "descrição": "http://xahlee.info/emacs/emacs/elisp.html"
+      }
+   },
+   "GR_12": {
+      "Grupo": "Caligrafia",
+      "GR_12_1": {
+         "site": "https://www.lettering-daily.com/calligraphy-history/",
+         "descrição": "https://www.lettering-daily.com/calligraphy-history/"
+      }
+   }
 }
