@@ -41,7 +41,7 @@ print("   </form>\"")
 print("   grupos = document.querySelectorAll('[tipo=\"Grupo\"]');")
 print("   IdGrp = [];")
 print("   Grp = [];")
-print("  for (var i = 0; i < grupos.length; i++){")
+print("   for (var i = 0; i < grupos.length; i++){")
 print("     IdGrp.push(grupos[i].getAttribute(\"grupo\"));")
 print("     Grp.push(grupos[i].innerHTML);")
 print("   } ")
@@ -68,7 +68,7 @@ print("      else if (window.ActiveXObject) {")
 print("          self.xmlHttpReq = new ActiveXObject('Microsoft.XMLHTTP');")
 print("      }")
 print("      self.xmlHttpReq.open('POST', '/cgi-bin/funcoes.py', true);")
-print("      self.xmlHttpReq.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');")
+print("      self.xmlHttpReq.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded;');")
 print("      self.xmlHttpReq.onreadystatechange = function() {")
 print("          if (self.xmlHttpReq.readyState == 4) {")
 print("              document.getElementById('res_atualizacao').innerHTML = self.xmlHttpReq.responseText;")
@@ -77,9 +77,18 @@ print("              document.getElementById(\"E_Atualizacao\").innerHTML=\"<inp
 print("          }")
 print("      }")
 print("      dados = document.forms[\"atualiza\"]")
-print("    parametros = 'funcao=atualizar'+'&site='+escape(dados.site.value)+'&descricao='+escape(dados.descricao.value)+'&Grupo='+escape(dados.Grupo_S.value);")
+
+# Solução para acentuação veio de:
+# https://pt.stackoverflow.com/questions/15336/acentos-e-caracteres-especiais-em-ajax-jquery
+# Quando tem acentos tem que usar o encodeURIComponent
+# Por algum motivo não funcionou colocar todos em uma linha só, por isso quebrei, colocando cada variável string em uma linha separada
+
+print("    sitio = encodeURIComponent(dados.site.value)")
+print("    descricao = encodeURIComponent(dados.descricao.value)")
+print("    novo_grupo = encodeURIComponent(dados.Grupo_S.value)")
+print("    parametros = 'funcao=atualizar'+'&site='+sitio+'&descricao='+descricao+'&Grupo='+novo_grupo;")
 print("    try {")
-print("            parametros = parametros +'&NovoNome='+escape(dados.NovoNome.value);")
+print("            parametros = parametros +'&NovoNome='+encodeURIComponent(dados.NovoNome.value);")
 print("    } catch { };")
 print("      self.xmlHttpReq.send(parametros);")
 print("    }")
