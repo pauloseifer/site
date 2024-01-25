@@ -1,0 +1,604 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2022-12-10 sáb 16:05 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>&lrm;</title>
+<meta name="author" content="Paulo Seifer" />
+<meta name="generator" content="Org Mode" />
+<style>
+  #content { max-width: 60em; margin: auto; }
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: Montserrat Light; color: red; }
+  .done   { font-family: Montserrat Light; color: green; }
+  .priority { font-family: Montserrat Light; color: orange; }
+  .tag    { background-color: #eee; font-family: Montserrat Light;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  html * {
+        font-family: Montserrat Light, sans-serif;
+  }
+  pre {
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
+    padding: 8pt;
+    font-family: Montserrat Light;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    top: -8px;
+    right: 12px;
+    padding: 3px;
+    color: #555;
+    background-color: #f2f2f299;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { width: 90%; }
+</style>
+</head>
+<body>
+<div id="content" class="content">
+<div id="table-of-contents" role="doc-toc">
+<h2>Tabela dos Contentes</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#orgf7279fe">1. Tese e Dissertação</a></li>
+<li><a href="#org05c2291">2. Textos / autor e co-autor</a></li>
+<li><a href="#org692939d">3. Diversos</a></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgf7279fe" class="outline-2">
+<h2 id="orgf7279fe"><span class="section-number-2">1.</span> Tese e Dissertação</h2>
+<div class="outline-text-2" id="text-1">
+<p>
+SEIFER, P., Gestão de projetos de microssistemas de geração e distribuição de energia elétrica: procurando seu sucesso e sustentabilidade, Dissertação de Mestrado, Programa de Pós-Graduação em Energia da Universidade Federal do ABC, Santo André, 2012.
+</p>
+
+<p>
+SEIFER, P., A relação entre usinas hidrelétricas e territórios para além da geração de energia: o caso das usinas
+hidrelétricas de Sobradinho – BA e Machadinho – RS, Tese Doutorado, Programa Interdisciplinar de Pós-graduação
+em Energia, Universidade Federal do ABC, 2018
+</p>
+</div>
+</div>
+
+<div id="outline-container-org05c2291" class="outline-2">
+<h2 id="org05c2291"><span class="section-number-2">2.</span> Textos / autor e co-autor</h2>
+<div class="outline-text-2" id="text-2">
+<p>
+SEIFER, Paulo Seifer; Drigo, Isabel Garcia; Costa Jr., Ciniro; Camargo, Ricardo; Coutinho, Bruno. Avaliação do capital natural em fazendas de soja no Cerrado brasileiro : uma aplicação do Protocolo de Capital Natural, Projeto Paraceria para o Bom Desenvolvimento (Good Growth Partnership), Piracicaba : Imaflora, 2020.
+</p>
+
+<p>
+SEIFER, Paulo; CAMARGO, Ricardo; DRIGO, Isabel. (2020). Quanto vale o verde na produção de soja no Matopiba? Caderno de Notas Técnicas do Programa Parceria para o Bom Desenvolvimento (GGP/ PNUD). Rio de Janeiro: Conservação Internacional Brasil, 2020.
+</p>
+
+<p>
+SEIFER, Paulo, MORANTE TRIGOSO, Federico Bernardino, A busca pelo sucesso em projetos de eletrificação rural descentralizada por meio de sistemas híbridos de geração de energia elétrica, Anais do VI Encontro Nacional da ANPPAS – Belém, 18 a 21 de setembro de 2012.
+</p>
+
+<p>
+SEIFER, Paulo, MORANTE TRIGOSO, Federico Bernardino, Proposta de diretrizes para o desenvolvimento de projetos de eletrificação rural descentralizada por meio de sistemas híbridos de geração de energia elétrica, Anais do VIII Congresso Brasileiro de Planejamento Energético – Curitiba, 12 a 15 de agosto de 2012.
+</p>
+
+<p>
+SEIFER, P. G., TRIGOSO, F. M., Proposta de método para o desenvolvimento de projetos de eletrificação rural descentralizada por meio de microssistemas de geração de energia elétrica In: LOSADA, J. M., PALACIOS-BERECHE, R., MAIORINO,, J. R, Questões sobre energia, Rio de Janeiro : Interciência, 2017.
+</p>
+
+<p>
+FAVARETO, Arilson da Silva ; SEIFER, P. . Fatores de sucesso e lições para o futuro no combate à pobreza: o caso dos projetos apoiados pelo FIDA no Brasil.. In: FIDA/IICA. (Org.). Práticas de desenvolvimento no Nordeste do Brasil - experiências apoiados pelo FIDA. 1ed.Brasília: IICA, 2013, v. 1, p. 31-67. 
+</p>
+
+<p>
+FAVARETO, Arilson da Silva ; SEIFER, P. . Success factors and lessons for the future - the experience of the projects supported by IFAD in Brazil. In: FIDA/IICA. (Org.). Development practices in Northeastern Brazil.. 1ed.Brasília: IICA, 2013, v. 1, p. 27-63. 
+</p>
+
+<p>
+FAVARETO, Arilson da Silva ; SEIFER, P. G. . As diferentes formas de definir o rural brasileiro e algumas tendências recentes - implicações para políticas de desenvolvimento e combate à pobreza. In: BUAINAIN, A.. (Org.). A nova cara da pobreza rural no Brasil - desafios para as políticas públicas.. 1ed.Brasília: IICA, 2012, v. 16, p. 55-106. 
+</p>
+
+<p>
+FAVARETO, ARILSON; KLEEB, Suzana; GALVANESE, C.; MAGALHÃES, Clarissa; CARDOSO, Ricardo C.; BUZATO, Heidi; SEIFER, P.; MORALEZ, R., Territórios importam - bases conceituais para uma abordagem relacional do desenvolvimento das regiões rurais ou interioranas no Brasil. Revista em Inovação, Gestão e Sustentabilidade - ReGIS, v. 1, p. 13-33, 2015.
+</p>
+
+<p>
+FAVARETO, ARILSON; KLEEB, Suzana ; GALVANESE, C. ; SEIFER, P. ; MAGALHÃES, Clarissa ; BUZATO, Heidi ; CARDOSO, Ricardo C. ; MORALEZ, R. . Metamorfoses da dominação nos territórios rurais ? qual a extensão das mudanças recentes nas regiões interioranas do Brasil contemporâneo?. Estudos Sociedade e Agricultura (UFRRJ), v. 23, p. 448-501, 2015.
+</p>
+
+<p>
+FAVARETO, Arilson da Silva; KLEEB, Suzana ; GALVANESE, C. ; SEIFER, P. ; MORALEZ, R. . Metamorfoses da dominação nos territórios rurais - qual a extensão das mudanças recentes nas regiões interioranas do Brasil contemporâneo?. In: 39 Encontro Anual da Anpocs, 2015, Caxambu. 39 Encontro Anual da Anpocs. Caxambu: Anpocs, 2015.
+</p>
+
+<p>
+FAVARETO, Arilson da Silva ; SEIFER, P. . Quinze anos de experiência de projetos de combate à pobreza no Nordeste do Brasil - lições e desafios.. In: XXXVII Encontro da Anpocs, 2013, Águas de Lindóia. XXXVII Encontro Anual da Associação Nacional de Pós-Graduação e Pesquisa em Ciências Sociais - Anpocs, 2013, 2013. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org692939d" class="outline-2">
+<h2 id="org692939d"><span class="section-number-2">3.</span> Diversos</h2>
+<div class="outline-text-2" id="text-3">
+<ul class="org-ul">
+<li>ACEMOGLU, D., ROBINSON, J. Working Paper 10 : The Role of Institutions in Growth and Development, Washington, D.C. : World Bank, 2008.</li>
+
+<li>ACEMOGLU, D., ROBINSON, J. Por que as nações fracassam : as origens do poder, da prosperidade e da pobreza, Rio de Janeiro : Elsevier, 2012.</li>
+
+<li>ACEMOGLU, D., JOHNSON, S., ROBINSON, J. Institutions as a fundamental cause of long-run growth, in: Handbook of Economic Growth, Volume 1A, Ed. Aghion, P., Durlauf, S. N.,, Elsevier, 2005.</li>
+
+<li>ACSELRAD, H. (Org.). Conflitos Ambientais no Brasil, Rio de Janeiro : Relume Dumará, 2004.</li>
+
+<li>ACSELRAD, H.,  da SILVA, M. G.  Conflito social e mudanças ambiental na barragem de Tucuruí, in ACSELRAD, H. (Org.), Conflitos Ambientais no Brasil, Rio de Janeiro : Relume Dumará, , p. 173-193, 2004.</li>
+
+<li>AIBA, Agricultura sequestradora de carbono em perímetros agricultados com algodão e culturas acessórias, Relatores: Silva Júnior, J., Lopes, J. C. M., Relatório Final no 001/2015.</li>
+
+<li>ANA,  Levantamento dos Usuários de Recursos Hídricos e da Situação dos Remanescentes Florestais do Entorno do Resevatório de Sobradinho, Agência Nacional das Águas, Brasilia, D.F. : MMA/SBF, 2010.</li>
+
+<li>ARRETCHE, M. (Org.). Trajetórias das Desigualdades : Como o Brasil Mudou nos Últimos Cinquenta Anos, São Paulo : Ed. Unesp, CEM, 2015.</li>
+
+<li>BACELAR, T.  Nordeste, Nordestes, que Nordeste, Fundação Joaquim Nabuco, 2002. Disponível em <a href="http://www.fundaj.gov.br/index.php?option=com_content&amp;view=article&amp;id=1956%3Anordeste-nordestes-que-nordeste-&amp;catid=58&amp;Itemid=414">http://www.fundaj.gov.br/index.php?option=com_content&amp;view=article&amp;id=1956%3Anordeste-nordestes-que-nordeste-&amp;catid=58&amp;Itemid=414</a></li>
+
+<li>BARBOSA, F. D. Nova História de Lagoa Vermelha, Passo Fundo : Projeto Passo Fundo, 1981.</li>
+
+<li>BARTLE, A. Hydropower potenial and development activities, Energy Policy, vol. 30, pgs 1231-1239, 2002.</li>
+
+<li>BEBBINGTON, A., ABRAMOVAY, R. e CHIRIBOGA, M. (editores). Social Movements and the dynamics of Rural Development in Latin America. Sessão especial de World Development, vol. 36, no 12, 2008.</li>
+
+<li>BERDEGUÉ, J. A., BEBBINGTON, A., ESCOBAL, J., FAVARETO, A., &#x2026;, TRIVELI, C. Territorios en Movimiento. Dinámicas Territoriales Rurales en América Latina, Programa Dinámicas Territoriales Rurales, Documento de Trabajo No. 10, RIMISP, 2012.</li>
+
+<li>BERDEGUÉ, J. A., ESCOBAL, J., BEBBINGTON, A. Explaining spatial diversity in latinamerica rural development - structures, institutions and coalitions, World Development, vol. 73, pg. 129-137, 2015. Disponível em: <a href="http://www.sciencedirect.com/science/article/pii/S0305750X14003295">http://www.sciencedirect.com/science/article/pii/S0305750X14003295</a></li>
+
+<li>BOURDIEU, P. O desencanto do mundo : Estruturas econômicas e estruturas temporais, São Paulo : Editora Perspectiva, 1979.</li>
+
+<li>BOURDIEU, P. A Distinção - Crítica social do Julgamento, Porto Alegre : Ed. Zouk/Edusp, 2008.</li>
+
+<li>BOURDIEU, P. Espaço físico, espaço social e espaço físico apropriado, Estudos Avançados, vol. 27, no. 79, 2013.</li>
+
+<li>BOURDIEU, P. O Senso Prático, São Paulo : Cia das Letras, 2014.</li>
+
+<li>BOWMAN, D. Sen and Bourdieu : Understanding Inequality, Social Policy Working Paper No. 14,  Melbourne : Brotherhood of St. Laurence, 2010.</li>
+
+<li>BRAGA, A. C. L. A. S. M. A Barragem de Sobradinho e a Cidade de Sento-Sé : Conflitos Sociais e Território no Processo de Realocação dos Atingidos (1973 a 1980), Dissertação (mestrado), Universidade Federal do ABC, 2014.</li>
+
+<li>CAETANO da SILVA, N. Os Movimentos Sociais na era Lula : para além da autonomia e da cooptação : Uma análise do Movimento de Atingidos por Barragens, Dissertação (mestrado), Universidade Federal do ABC, 2013.</li>
+
+<li>CARGNIN, A. P. Políticas de Desenvolvimento Regional no rio Grande do Sul : Vestígios, Marcas e Repercussões Territoriais, Tese (Doutorado), Universidade Federal do Rio Grande do Sul, 2011.</li>
+
+<li>CASTANHEIRA, G. E., Freire, F., Greenhouse gas assessment of soybean production: implications of land use change and different cultivation systems, Journal of Cleaner Production, 54, pgs 49-60, 2013.</li>
+
+<li>CASTEL, R. As metamorfoses da questão social : uma crônica do salário, Petrópolis: Vozes, 1998.</li>
+
+<li>CERNEA, M. M. Involuntary resettlement in development projects : policy guidelines in World Bank-financed projects, World Bank Publications, 1988.</li>
+
+<li>COGNEAU, D, NAUDET, J. Who deserves aid? Equality of oppotunity, international aid and poverty reduction, Discussion Papers // Ibero America Institute for Economic Research, no. 110, disponível em <a href="http://hdl.handle.net/10419/27407">http://hdl.handle.net/10419/27407</a>, 2004.</li>
+
+<li>COLLIER, P., DOLLAR, D. Can the world cut poverty in half? How policy reform and effective aid can meet international development goals, World Development, vol. 29, no. 11, pag. 1787-1802, 2001.</li>
+
+<li>CONAMA, Resolução Conama Nº9, de 03 de dezembro de 1987, Brasília : Conama, 1987.</li>
+
+<li>COSTANZA, R., d’Arge, R., de Groot, R., Farber, S., Grasso, M., Hannon, B., Limburg, K., Naeem, S., O’Neill, R.V., Paruelo, J., Raskin, G.R., Sutton, P., van der Belt, M., (1997). The value of the world’s ecosystem services and natural capital. Nature 387, pp.253–260.</li>
+
+<li>CPT NACIONAL, Histórico, Disponível em: <a href="https://www.cptnacional.org.br/index.php/sobre-nos/historico">https://www.cptnacional.org.br/index.php/sobre-nos/historico</a>, acesso em 20 de jan de 2017.</li>
+
+<li>CRUZ, C. B., da SILVA, V. P. Grandes Projetos de Investimento : A construção de hidrelétricas e a criação de novos territórios, Sociedade &amp; Natureza, Uberlândia, vol. 22, no. 1, pgs. 181-190, 2010.</li>
+
+<li>DAMIANI, O.  Diversificação agrícola e redução de pobreza : a Introdução do Nordeste Brasileiro de Produtos Agrícolas não tradicionais de Alto Valor e Seus Efeitos Sobre Pequenos Produtores e Trabalhadores Rurais Assalariados, Revista Econômica do Nordeste, v. 34, no. 1,  2003.</li>
+
+<li>DAMIANI, O., De NYS, E. Desafios da gestão social dos perímetros públicos de irrigação: uma avaliação de experiências no Nordeste do Brasil, Brasília : Banco Mundial, 20152015.</li>
+
+<li>DANTAS, K. L., Monteiro, M. S. L., Valoração Econômica dos Efeitos Internos da Erosão: Impactos da Produção de Soja no Cerrado Piauiense, RESR, Piracicaba, SP, vol. 48, no 4, p. 619-633, out/dez 2010</li>
+
+<li>DALY, H. E., Farley, J., Ecological Economics: Principal and Practices, Island Press, 2003.</li>
+
+<li>DEN FARM, Trial of the Natural Capital Protocol for land-based businesses, Natural Capital Assessement, Cumulus Consultants Ltd, 2008.</li>
+
+<li>DENEULIN, S. Beyond Individual Freedom and Agency : Structures of Living Together in the Capability Approach, in: Comim, F., Qizilbash, M., Alkire, S. (Orgs), The Capability Approach : Concepts, Measures and Applications, Cambridge : Cambridge University Press, 2008.</li>
+
+<li>DOURADO, A., et al.Perímetros Públicos de Irrigação : Propostas para o Modelo de Transferência de Gestão, Brasília, DF : Fundace, 2006.</li>
+
+<li>DRÈZE, J., SEN, A. India : Development and Participation, Oxford : Oxford University Press, 2002.</li>
+
+<li>DUQUÉ, G. Sobradinho, 30 anos depois (notas preliminares), III Encontro Latinoamericano de Ciências Sociais e Barragens, Belém - PA, disponível em: <a href="http://ecsbarragens.ufpa.br/site/cd/ARQUIVOS/GT8-352-270-20101114214358.pdf">http://ecsbarragens.ufpa.br/site/cd/ARQUIVOS/GT8-352-270-20101114214358.pdf</a>, 2010.</li>
+
+<li>EGRÉ, D., MILEWSKI, J. C. The diversity of hydropower projects, Energy Policy, vol. 30, pgs 1225-1230, 2002.</li>
+
+<li>EGRÉ, D., SENÉCAL, P. Social impact assessments of large dams throughout the world : lessons learned over two decades, Impact Assessment and Project Appraisal, vol. 21, no. 3, pgs. 215-224, 2003.</li>
+
+<li>ELIAS, N. A Sociedade dos Indivíduos, Rio de Janeiro : Zahar Ed., 1994.</li>
+
+<li>FAO, Natural capital impacts in agriculture : Support better business decision making, 2015.</li>
+
+<li>FAVARETO, A., ABRAMOVAY, R., D’OLIVEIRA, M. C., DINIZ, J. F., SAES, B. Desenvolvimento territorial em uma região do Semi-árido do nordeste brasileiro – para além das transferências de renda, Documento de Trabajo no. 83, Programa Dinámicas Territoriales Rurales, RIMISP, Santiago, Chile, 2011.</li>
+
+<li>FAVARETO A., MORALEZ R. (Orgs). Energia, Desenvolvimento e Sustentabilidade, Porto Alegre : Ed. Zouk, 2014.</li>
+
+<li>FAVARETO, A., GALVANESE, C., BARUFI, A. M., SEIFER, P. A dimensão territorial do desenvolvimento brasileiro recente : Brasil (2000-2010), Projeto Coesão Social para o Desenvolvimento, RIMISP/CEBRAP/UFABC, São Paulo/Santiago de Chile, 2014.</li>
+
+<li>FAVARETO, A., KLEEB, S., GALVANESE, C., MAGALHÃES, C., CARDOSO, R. C., BUZATO, H., SEIFER, P., MORALEZ, R. Territórios importam - bases conceituais para uma abordagem relacional do desenvolvimento das regiões rurais ou interioranas no Brasil. Revista em Inovação, Gestão e Sustentabilidade - ReGIS, v. 1, p. 13-33, 2015a.</li>
+
+<li>FAVARETO, A., KLEEB, S., GALVANESE, C.; SEIFER, P.; MAGALHÃES, C., BUZATO, H., CARDOSO, R. C., MORALEZ, R. Metamorfoses da dominação nos territórios rurais ? qual a extensão das mudanças recentes nas regiões interioranas do Brasil contemporâneo?. Estudos Sociedade e Agricultura (UFRRJ), v. 23, p. 448-501, 2015b.</li>
+
+<li>FAVARETO, Arilson (org.); NAKAGAWA, Louise; PÓ, Vinícuis, SEIFER, Paulo e KLEEB, Suzana. Entre chapadas e baixões do Matopiba: dinâmicas territoriais e impactos socioeconômicos na fronteira da expansão agropecuária no Cerrado. São Paulo: Prefixo Editorial, 2019.</li>
+
+<li>FAURE, A. Improving public information about large hydroelectric dams : case studies in France and West Africa, Natural Resources Forum, vol. 27, pgs. 32-41, 2003.</li>
+
+<li>FEARNSIDE, P. M. Social impacts of Brasil's Tucuruí Dam, Environmental Management, vol. 24, no. 4, pgs. 483-495, 1999.</li>
+
+<li>FLYVBJERG, B., BRUZELIUS, N., ROTHENGATTER, W. Megaprojects and Risk : An Anatomy of Ambition, Cambridge University Press, 2003.</li>
+
+<li>FOSTER, G. M. As culturas tradicionais e o impacto da tecnologia. São Paulo: Editora Fundo de Cultura, 1964.</li>
+
+<li>FUJIKURA, R., NAKAYAMA, M. Lesson learned from the World Commission of Dams, Int. Environ. Agreements, vol. 9, pgs 173-190, 2009.</li>
+
+<li>FURTADO, F., FURTADO, R. C., BUARQUE, S., FLORISS, E. Medindo o Desenvolvimento Local Sustetável, Ciencia &amp; Trópico, vol. 34, p. 9-34, 2010.</li>
+
+<li>FURTADO, F., FURTADO, R. C. Usinas Hidrelétricas e Desenvolvimento Local Sustentável, Ilumina – Instituto de Desenvolvimento Estratégido do Setor Energético, disponível em: <a href="http://ilumina.org.br/pesquisa-usinas-hidreletricas-e-desenvolvimento-sustentavel/">http://ilumina.org.br/pesquisa-usinas-hidreletricas-e-desenvolvimento-sustentavel/</a>, acesso em 20 de abril de 2016, 2011.</li>
+
+<li>GAGNON, L., KLIMPT, J., SEELOS, K. Comparing recommendations from the World Commission on Dams and the IEA initiative on hydropower, Energy Policy, vol. 30, pgs 1299-1304, 2002.</li>
+
+<li>GALVANESE, C. S. Dilemas do Planejamento Sustentável e as Instituições do Desenvolvimento Sustentável : Estudo Sobre as Barragens e a Questão Regional no Vale do Ribeira, Dissertação (Mestrado), Universidade Federal do ABC, Programa de Pós-graduação em Energia, 2009.</li>
+
+<li>GEORGESCU-ROEGEN, N., The Entropy Law and the Economic Process, Harvard University Press, 1971.</li>
+
+<li>GEERTZ, C. A interpretação das culturas, São Paulo : LTC, 1978.</li>
+
+<li>GLAESER, E. L, LAPORTA, R., LÓPEZ-DE-SILANES, F., SHLEIFER. Do Institutions Cause Growth?,Journal of Economic Growth, vol. 9, no 3, pgs. 271-303, 2004.</li>
+
+<li>GOHN, M. G. Movimentos Sociais na Contemporaneidade, Revista Brasileira de Educação, v.16, n. 47, p. 333-351, maio/ago. 2011.</li>
+
+<li>GOMES, D. C. M., KHAN, A. S. O impacto social da Barragem do Castanhão: efeitos do reassentamento compulsório na qualidade de vida da população urbana de Jaguaribara, Sober, 2003.</li>
+
+<li>GOMIDE, Alexandra de Ávila; PEREIRA, Ana Karine, organizadores, Governança da política de infraestrutura : condicionantes institucionais ao investimento / Alexandre de Ávila Gomide, Ana Karine Pereira, editores. - Rio de Janeiro : Ipea, 2018.</li>
+
+<li>GONÇALVES, E. L. Opara - Forma Histórica e Social do Submédio São Francisco, Petrolina : Gráfica Franciscana, 1997.</li>
+
+<li>HAESBAERT, R. O Mito da Desterritorialização : Do Fim dos Territórios à Multiterritorialidade,  Rio de Janeiro : Bertrand, 2004.</li>
+
+<li>HALL, A. Grassroots action for resettlement planning: Brazil and Beyond, World Development, vol. 22, no 12, 1793-1809, 1994.</li>
+
+<li>HART, C. S. Aspirations, Education and Social Justice : Applying Sen and Bourdieu,  Ed. Bloomsbury, 2012.</li>
+
+<li>HERRLEIN JR. A transição capitalista no Rio Grande do Sul, 1889-1930: uma nova interpretação,  Economia e Sociedade, Campinas, v. 13, n. 1 (22), p. 175-207, jan./jun. 2004.</li>
+
+<li>HINOJOSA, L. (Org.). Gas y Desarrolo : Dinámicas Territoriales en Tarija - Bolivia, La Paz : Tierra, 2012.</li>
+
+<li>IBGE. VIII Recenseamento Geral, disponível em <a href="http://biblioteca.ibge.gov.br/biblioteca-catalogo?id=557&amp;view=detalhes">http://biblioteca.ibge.gov.br/biblioteca-catalogo?id=557&amp;view=detalhes</a>, 1970.</li>
+
+<li>IBGE. IX Recenseamento Geral do Brasil, disponível em <a href="http://biblioteca.ibge.gov.br/biblioteca-catalogo?id=5122&amp;view=detalhes">http://biblioteca.ibge.gov.br/biblioteca-catalogo?id=5122&amp;view=detalhes</a>. 1980.</li>
+
+<li>IBGE. Censo Agropecuário 2006, disponível em <a href="http://www.ibge.gov.br/home/estatistica/economia/agropecuaria/censoagro/default.shtm">http://www.ibge.gov.br/home/estatistica/economia/agropecuaria/censoagro/default.shtm</a>,  2006.</li>
+
+<li>IBGE. Censo Demográfico 2010, disponível em <a href="http://www.ibge.gov.br/home/estatistica/populacao/censo2010/">http://www.ibge.gov.br/home/estatistica/populacao/censo2010/</a>, 2010a.</li>
+
+<li>IBGE. Estatísticas do Cadastro Central de Empresas 2010, disponível em <a href="http://www.ibge.gov.br/home/estatistica/economia/cadastroempresa/2010/">http://www.ibge.gov.br/home/estatistica/economia/cadastroempresa/2010/</a>, 2010b.</li>
+
+<li>IBGE. As Fundações Privadas e Associações sem Fins Lucrativos no Brasil, disponível em <a href="http://www.ibge.gov.br/home/estatistica/economia/fasfil/2010/">http://www.ibge.gov.br/home/estatistica/economia/fasfil/2010/</a>, 2010c.</li>
+
+<li>IEA. International Energy Agency, Hydropower and the environment: present context and guidelines for future action, IEA Hydropower Agreement Anexo III, 2000.</li>
+
+<li>IP, D. F. Difficulties in implementing social impact assessment in China : methodological considerations, Environmental Impact Assessment Review, vol. 10, pgs. 113-122, 1990.</li>
+
+<li>IPCC, Guidelines for National Greenhouse Gas Inventories. National Greenhouse Gas Inventories Programme, Intergovernmental Panel on Climate Change, 2006.</li>
+
+<li>IPEA, Instituto de Pesquisa Econômica Aplicada, Projeto Competitividade e Governança das Cidades Médias dos Brasil : sistema urbano, centralidade e competitividade das cidades médias : Relatório 2, Rio de Janeiro : IPEA, 2022.</li>
+
+<li>JOHNSON, S. Institutions, Markets and Economic Development, in: DENEULIN, S., SHAHANI, L. (Orgs.), An Introduction to the Human Development and Capability Approach : Freedom and Agency, Londres : Earthscan, 2009.</li>
+
+<li>KAWAMURA ET AL. Empregos e Desenvolvimento Territorial em duas Regiões dos Nordeste Brasileiro, Relatório de pesquisa SP/Santiago do Chile : CEBRAP/RIMISP, 2013.</li>
+
+<li>KOCH, F.  H. Hydropower - the politics of water and energy : Introduction and overview, Energy Policy, vol. 30, pgs 1207-1213, 2002.</li>
+
+<li>LAPLANTINE, F. Aprender antropologia, São Paulo : Brasiliense, 2007.</li>
+
+<li>LEAL, V. N. Coronelismo, Enxada e Voto - O Município e o Regime Representativo no Brasil, São Paulo : Cia das Letras, 1948.</li>
+
+<li>LIMA, A. R. Memorias dos Lameiros do Velho Chico : História da População Transplantada para Quixaba, Sento Sé - BA, Dissertação (Mestrado), Universidade Federal de Pernambuco, 2004.</li>
+
+<li>LOTTA, Gabriela; FAVARETO, Arilson, Os arranjos institucionais de coordenação dos investimentos em infraestrutura no Brasil : uma análise sobre os seis grans projetos do Programa de Aceleração do Crescimento, em GOMIDE, Alexandra de Ávila; PEREIRA, Ana Karine, organizadores, Governança da política de infraestrutura : condicionantes institucionais ao investimento / Alexandre de Ávila Gomide, Ana Karine Pereira, editores. - Rio de Janeiro : Ipea, 2018.</li>
+
+<li>MAGALHÃES, C. As Instituições Aprendem? As Hidrelétricas do Rio Madeira e a Internalização das Variáveis Social e Ambiental na Gestão dos Recursos Naturais, Dissertação (Mestrado), Universidade Federal do ABC, Programa de Pós-graduação em Energia, 2009.</li>
+
+<li>MAHONEY, J., THELEN, K. Explaining Institutional Change : Ambiguity, agency and power, Cambridge University Press, 2010.</li>
+
+<li>MEADOWS, D. et al., The limits of growth,  Universe Books : Nova York, 1972.</li>
+
+<li>MEDEIROS, C. A. Desenvolvimento econômico e estratégias de redução da pobreza e das desigualdade no Brasil, Ensaios FEE, Porto Alegre, vol. 24, no. 2, pag. 323-350, 2003.</li>
+
+<li>MEDEIROS, L. S. História dos Movimentos Sociais, Rio de Janeiro : FASE, 1989.</li>
+
+<li>MELLO, M. A. G. História política do baixo médio São Francisco, Dissertação</li>
+<li>(Mestrado em Ciências Sociais) - Faculdade de Filosofia e Ciências Humanas, UFBA, Salvador, 1989.</li>
+
+<li>MENDES DA SILVA, E., GERMANI, G. I. Os que Foram e os que Voltaram : A Rejeição ao PEC/Serra do Ramalho como Resistência Camponesa a Sobradinho, IV Simpósio Internacional de Geografia Agrária, Niterói - RJ, 2009.</li>
+
+<li>MST. Nossa História, disponível em <a href="http://www.mst.org.br/nossa-historia/">http://www.mst.org.br/nossa-historia/</a>, acesso em 15 de fev de 2017.</li>
+
+<li>NERES, J. C. I. Avaliação ambiental da ocupação espacial do Vale do rio Tocantins por usinas hidrelétricas, Dissertação (mestrado), Pontifícia Universidade Católica de Goiás, 2008.</li>
+
+<li>Néspoli, R. S., Pizzato, R. Usina Hidrelétrica Machadinho : Memória Técnica, Florianópolis : NPE/UFSC, 2007.</li>
+
+<li>NOGUEIRA, N . D. A Usina Hidrelétrica Cachoeira do Emboque - MG : o significado da barragem para os atingidos, Dissertação (mestrado), Universidade Federal de Viçosa, 2007.</li>
+
+<li>NORTH, D. Institutions, Institutional Change and Economic Performance, New York : Cambridge University Press, 1991.</li>
+
+<li>NORTH, D., WALLIS, J., WEINGAST, B. Violence and social orders: a conceptual framework for interpreting recorded human history, Cambridge : Cambridge University Press, 2009.</li>
+
+<li>NCC, Natural Capital Coalition, disponível em &lt;naturalcapitalcoalition.org/natural-capital-protocol&gt;, acesso em 04/05/2019.</li>
+
+<li>NPC, Natural Capital Protocol, Natural Capital Coalition, 2016.</li>
+
+<li>OLAVARRIA-GAMBI, M. Poverty reduction in Chile : has economic growth been enough?, Journal of Human Development, vol. 4, no 1, 2003.</li>
+
+<li>OSTROM, E., SCHOEDER, L., WYNNE, S. Institutional Incentives and Sustainable Development : Infrastructure Policies in Perspective, San Francisco : Westview Press, 1993.</li>
+
+<li>OSTROM, E. Understanding Institutional Diversity, Princeton University Press, 2005.</li>
+
+<li>OUD, E. The evolving context for hydropower development, Energy Policy, vol. 30, pgs 1215-1223, 2002.</li>
+
+<li>PARK THERMAS MACHADINHO. O Hotel, disponível em <a href="http://parkhoteltermasmachadinho.com.br/o-hotel/">http://parkhoteltermasmachadinho.com.br/o-hotel/</a>, acesso em 15 de fevereiro de 2017.</li>
+
+<li>PETRONE, M. T. S. O Imigrante e a Pequena Propriedade, São Paulo : Brasiliense, 1982.</li>
+
+<li>PIAGENTINI, P., FAVARETO, A. Instituições para regulação ambiental - o processo de licenciamento ambiental em quatro países produtores de hidreletricidade, Desenvolvimento e Meio Ambiente (UFPR), v. 30, p. 31-43, 2014.</li>
+
+<li>PINHEIRO, M. F. B. Problemas sociais e institucionais na implantação de hidrelétricas : seleção de casos recentes no Brasil e casos relevantes em outros países, Dissertação (mestrado), Universidade Estadual de Campinas, 2007.</li>
+
+<li>PNE. Plano Nacional de Energia 2030, Ministério Minas e Energia; Empresa de Pesquisa Energética Brasília : MME EPE, 2007.</li>
+
+<li>PRITSCH, L., MIRANDA, C.R. Mudanças do Perfil Socioeconômico e Cultural da População Rural do Entorno do Lago da Usina Hidrelétrica Itá, in: MORO, E. J., (Org). Desenvolvimento Territorial, Agricultura Familiar e Meio Ambiente no Alto Uruguai Catarinense, Blumenau : IFC, 2015.</li>
+
+<li>PRUDÊNCIO DA SILVA, V., et al., Variability in environmental impacto of Brazilian soybean according to crop production and transport scenarios, Journal of Environmental Management, 91, pgs 1831-1839, 2010.</li>
+
+<li>RAIS. RAIS Vínculos ano 2010, disponível em <a href="http://bi.mte.gov.br/bgcaged/rais.php">http://bi.mte.gov.br/bgcaged/rais.php</a>, acesso em 21 de setembro de 2016.</li>
+
+<li>RAYMOND, C. M., Bryan, B. A., MacDonald, D. H., Cast, A., Strathearn, S., Grandgirard, A., Kalivas, T., Mapping community values or natural capital and ecosystem services, Ecological Economics, 68, pgs 1301-1315, 2009.</li>
+
+<li>RAUCCI, G. S., Greenhouse gas assessement of brazilian soybean production and post-harvest nitrous oxide emissions from crop residues decomposition, Dissertação (mestrado), Centro para Energia Nuclear na Agricultura, USP, 2015.</li>
+
+<li>ROCHA, G. M. Reodenamento Territorial e Político - institucional e Desenvolvimento Local na Amazônia : O caso de Tucuruí (PA), Anais do X Encontro de Geógrafos da América Latina, Universidade de São Paulo, 20 a 26 de março de 2005.</li>
+
+<li>RODRIGUEZ, W., Valoração Econômica dos Impactos Ambientais de Tecnologias de Plantio em Região de Cerrados, RER, Rio de Janeiro, vol. 43, no 01, jan/mar 2005.</li>
+
+<li>RODRIGUEZ, W., Barbosa, G. F., Custos ambientais da produção da soja em áreas de expansão recente nos cerrados brasileiros: o caso de Pedro Afonso – TO, Custos e @gronegócio on line, v. 7, n. 3, 2011.</li>
+
+<li>ROSENBERG, D. M., BODALY, R. A., USHER, P. J. Environmental and social impacts of large scale hidroelectric development : who is listening?, Global Environmental Change, vol. 5, no. 2, pgs. 127-148, 1995.</li>
+
+<li>ROSENBERG, D. M., BERKES, F., BODALY, R. A., HECKY, R. E., KELLY, C. A., RUDD, J. W. M. Large-scale impacts of hydroelectric development, Environ. Rev., vol. 5, pgs. 27-54, 1997.</li>
+
+<li>ROSSOUW, N., MALAN, S. The importance of theory in shaping social impact monitoring : lessons from the Berg River Dam, South Africa, Impact Assessment and Project Appraisal, vol. 25, no. 4, pgs. 291-299, 2007.</li>
+
+<li>SEN, A. Well-Being, agency and freedom: The Dewey Lectures 1984. The Journal of Philosophy, vol. 82, no. 4, pp. 169-221, abril, 1985.</li>
+
+<li>SEN, A. Commodities and Capabilities, Oxford : Oxford University Press, 1987.</li>
+
+<li>SEN, A. Desenvolvimento como Liberdade, São Paulo: Companhia das Letras, 1999.</li>
+
+<li>SIGAUD, L. Efeitos sociais de grandes projetos hidrelétricos: as barragens de Sobradinho e Machadinho, Programa de Pós-Graduação em Antropologia Social, Museu Nacional-UFRJ, 1986.</li>
+
+<li>SILVA, P. C. G. Articulação dos interesses públicos e privados no pólo Petrolina/Juazeiro, Tese (Doutorado), Instituto de Economia, Unicamp, Campinas, 2001.</li>
+
+<li>SILVA, L. L. A compensação financeira das usinas hidrelétricas como instrumento econômico de desenvolvimento social, econômico e ambiental, Dissertação (mestrado), Universidade de Brasília, 2007.</li>
+
+<li>SILVA, M. P. O Bispo de Juazeiro e a Ditadura Militar, in: ZACHARIADHES, G. C., Ditadura Militar na Bahia : Novos Olhares, Novos Objetos, Novos Horizontes, Salvador : EDUFBA, 2009.</li>
+
+<li>SILVA, A. Usina Hidrelétrica de Miranda e as mudanças socioespacais em Indianópolis-MG, Dissertação (Mestrado) - Universidade Federal de Uberlândia, Programa de Pós-graduação em Geografia, 2012.</li>
+
+<li>SILVA, R. G. S, da SILVA, V. P. Grandes Projetos de Investimentos e seus efeitos socioespaciais no território: transformações na identidade dos atingidos do assentamento Olhos d’Água em Uberlândia (MG), Revista Geográfica da América Central, vol. 2, no. 47E, 2011.</li>
+
+<li>SIMS, H. Moved, left no address : dam construction, displacement and issue salience, Public Administration and Development, no. 21, pgs. 187-200, 2001.</li>
+
+<li>SIQUEIRA, R. A. de. Do que as Águas não Cobriram : Um estudo sobre o Movimento dos Camponeses Atingidos pela Barragem de Sobradinho, João Pessoa : UFPB, 1992.</li>
+
+<li>SOBRADINHO. A Cidade, disponível em: <a href="http://www.sobradinho.ba.gov.br/?sessao=informacao&amp;cod_informacao=2">http://www.sobradinho.ba.gov.br/?sessao=informacao&amp;cod_informacao=2</a>, acesso em 20 de março de 2014.</li>
+
+<li>STERNE, J., Bourdieu, technique and technology, Cultural Studies, 17(3/4), pgs. 367-389, 2003</li>
+
+<li>SULLIVAN, S., The natural capital myth; or will accounting save the world? Preliminary thoughts on nature, finance and values, LSCV Working Paper Series no. 3, The University of Manchester, 2014.</li>
+
+<li>TEEB, TEEB for business Brazil, 201 4.</li>
+
+<li>THOMAS, D. H. L., ADAMS, W. M. Adapting to dams : agrarian change downstream of the Tiga Dam, northern Nigeria, World Development, vol. 27, no. 6, pgs. 919-935, 1999.</li>
+
+<li>TILT, B., BRAUN, Y. Daming, Social impactos of large dam projetcts : A comparison of international case studies ans implications for best practice, Journal of Environmental Management, vol, 90, pgs S249-S257, 2009.</li>
+
+<li>TOMADON Jr., J., Avaliação do impacto ambiental causado pelo sistema de produção de soja na região do Oeste do Paraná, Tese (Doutorado), Universidade Estadual de Maringá, 2015.</li>
+
+<li>TRUSSART, S., MESSIER, D., ROQUET, V., AKI, S. Hydropower projects: a review of most effective mitigation measures, Energy Policy, vol. 30, pgs 1251-1259, 2002.</li>
+
+<li>VAINER, C. B., ARAUJO, F. G. R. de. Grandes projetos hidrelétricos e desenvolvimento regional, Rio de Janeiro : CEDI, 1992.</li>
+
+<li>VAINER, C. B. Planejamento territorial e projeto nacional: os desafios da fragmentação, Revista Brasileira de Estudos Urbanos e Regionais, v.9, n.1, 2007.</li>
+
+<li>VANCLAY, F. Conceptualising social impacts, Environmental Impact Assessment Review, vol. 22, pgs. 183-211, 2002.</li>
+
+<li>VIANA, R. de M. Grandes barragens, impactos e reparações : um estudo de caso sobre a barragem de Itá, Dissertação (mestrado), IPPUR/Universidade Federal do Rio de Janeiro, 2003.</li>
+
+<li>VIANNA JR., A. Prisão em Lajeado Pepino : Uma Ação Social Contra a Barragem de Sobradinho, Rio de Janeiro : Casa 8, 2012.</li>
+
+<li>VIGNATTI, M. A. P. Modificações Territoriais Induzidas pelas Usinas Hidrelétricas do Rio Uruguai, no Oeste Catarinense, Tese (Doutorado), Universidade Federal de Santa Catarina, 2013.</li>
+
+<li>VOIGT, S. How (Not) to measure institutions. Journal of Institutional Economics, vol. 9, no. , pg. 1-26, 2012. </li>
+
+<li>WERNER, D. Desenvolvimento regional e grandes projetos hidrelétricos (1990-2010) : o caso do Complexo do Madeira, Inc. Soc., vol. 6, no. 1, pgs 157-174, Brasilia, jul/dez, 2012.</li>
+
+<li>WEBER, D., BRANDÃO, C., Infraestrutura e produção social do espaço: anotações sobre suas principais</li>
+<li>mediações teóricas, G&amp;DR. V. 15, N. 5, P. 287-301, set-dez/2019. Taubaté, SP, Brasil. ISSN: 1809-239X.</li>
+
+<li>WCD. World Comission on Dams, Dams and Development : a new framework for decision making, London : Earthscan, 2000.</li>
+
+<li>ZHOURI, A., OLIVEIRA, R. Desenvolvimento, conflitos sociais e violência no Brasil rural : o caso das usinas hidrelétricas, Ambiente &amp; Sociedade, vol. X, no. 2, pgs. 119-135, 2007.</li>
+
+<li>ZHOURI, A., Justiça Ambiental, Diversidade Cultural e Accountability : Desafio para a governança ambiental, Revista Brasileira de Ciências Sociais, vol. 23, no. 68, 2008.</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="author">Author: Paulo Seifer</p>
+<p class="date">Created: 2022-12-10 sáb 16:05</p>
+<p class="validation"><a href="https://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>

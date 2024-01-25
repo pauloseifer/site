@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+
+<html>
+  <body>
+    <meta charset="utf-8">
+    <a href="./referencias.html"> Referências </a>
+    <form action="cgi-bin/gera_html_prod.py" method="post">
+      <button type="submit">Bookmark</button>
+    </form>
+  </body>
+</html>

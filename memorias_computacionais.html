@@ -1,0 +1,749 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2024-01-25 qui 18:38 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Memórias computacionais</title>
+<meta name="author" content="Paulo Seifer" />
+<meta name="description" content="Memória" />
+<meta name="generator" content="Org Mode" />
+<style>
+  #content { max-width: 60em; margin: auto; }
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    top: -8px;
+    right: 12px;
+    padding: 3px;
+    color: #555;
+    background-color: #f2f2f299;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { }
+</style>
+<style>*{font-family: Montserrat Light !important}</style>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        displayAlign: "center",
+        displayIndent: "0em",
+
+        "HTML-CSS": { scale: 100,
+                        linebreaks: { automatic: "false" },
+                        webFont: "TeX"
+                       },
+        SVG: {scale: 100,
+              linebreaks: { automatic: "false" },
+              font: "TeX"},
+        NativeMML: {scale: 100},
+        TeX: { equationNumbers: {autoNumber: "AMS"},
+               MultLineWidth: "85%",
+               TagSide: "right",
+               TagIndent: ".8em"
+             }
+});
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_HTML"></script>
+</head>
+<body>
+<div id="content" class="content">
+<h1 class="title">Memórias computacionais</h1>
+<div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#org660e2ef">1. Diversos comp</a>
+<ul>
+<li><a href="#orgfd2d162">1.1. MySQL</a></li>
+<li><a href="#org3bbae30">1.2. Diversos</a></li>
+<li><a href="#orgc1f7a3e">1.3. Rede</a></li>
+<li><a href="#org0f8c763">1.4. Gráficos no terminal</a></li>
+<li><a href="#org0f4467f">1.5. exibir txt / csv no org</a></li>
+<li><a href="#org17a2c9f">1.6. GPU</a></li>
+<li><a href="#orga3b7f6f">1.7. Curso LISP</a></li>
+<li><a href="#orgf508b94">1.8. bash</a></li>
+<li><a href="#org82ea265">1.9. ssh</a></li>
+<li><a href="#org7f095e5">1.10. Automatização de web browser</a></li>
+<li><a href="#orgecfa544">1.11. Vírus, hacks e afins</a></li>
+</ul>
+</li>
+<li><a href="#org34de82f">2. R</a></li>
+<li><a href="#org7d0f464">3. Emacs</a>
+<ul>
+<li><a href="#org0b2c436">3.1. Programação</a></li>
+<li><a href="#org05bf3ed">3.2. Editar como root</a></li>
+<li><a href="#org4e7192c">3.3. Atalho para links</a></li>
+<li><a href="#orgca725cd">3.4. função configura ambiente</a></li>
+<li><a href="#org3f64879">3.5. Automatizar</a></li>
+<li><a href="#org68f408a">3.6. Diversos</a></li>
+<li><a href="#org9b1a23b">3.7. Reveal</a></li>
+</ul>
+</li>
+<li><a href="#org9cfac03">4. Git</a></li>
+<li><a href="#orgff6fa24">5. Criptografia</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org660e2ef" class="outline-2">
+<h2 id="org660e2ef"><span class="section-number-2">1.</span> Diversos comp</h2>
+<div class="outline-text-2" id="text-1">
+</div>
+<div id="outline-container-orgfd2d162" class="outline-3">
+<h3 id="orgfd2d162"><span class="section-number-3">1.1.</span> MySQL</h3>
+<div class="outline-text-3" id="text-1-1">
+<ul class="org-ul">
+<li>Senha root (logado como root): mysqladmin -u root password senha<br /></li>
+<li>no mysql: CREATE USER 'pseifer'@'localhost' IDENTIFIED BY 'senha';<br /></li>
+<li>todos privilégios: GRANT ALL PRIVILEGES ON <b>.</b> TO 'pseifer'@'localhost';<br /></li>
+<li>Para acesso externo:<br />
+<ul class="org-ul">
+<li><a href="https://phoenixnap.com/kb/mysql-remote-connection">https://phoenixnap.com/kb/mysql-remote-connection</a><br /></li>
+<li>CREATE USER 'myuser'@'localhost' IDENTIFIED BY 'mypass';<br /></li>
+<li>CREATE USER 'myuser'@'%' IDENTIFIED BY 'mypass';<br /></li>
+<li>GRANT ALL ON <b>.</b> TO 'myuser'@'localhost';<br /></li>
+<li>GRANT ALL ON <b>.</b> TO 'myuser'@'%';<br /></li>
+<li>FLUSH PRIVILEGES;<br /></li>
+</ul></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org3bbae30" class="outline-3">
+<h3 id="org3bbae30"><span class="section-number-3">1.2.</span> Diversos</h3>
+<div class="outline-text-3" id="text-1-2">
+<ul class="org-ul">
+<li><a href="https://www.guru99.com/practical-code-examples-using-javascript.html">https://www.guru99.com/practical-code-examples-using-javascript.html</a><br /></li>
+<li><a href="https://www.w3schools.com/js/js_examples.asp">https://www.w3schools.com/js/js_examples.asp</a><br /></li>
+<li><a href="https://www.w3schools.com/graphics/canvas_drawing.asp">https://www.w3schools.com/graphics/canvas_drawing.asp</a><br /></li>
+<li>Mudar o mapa de teclado do surface:<br />
+<ul class="org-ul">
+<li>no arquivo /usr/share/X11/xkb/symbols/br mudar a linha:<br /></li>
+<li>key &lt;BKSL&gt; { [ bracketright,     braceright,    backslash,             bar ] };<br /></li>
+<li>com essa mudança a barra \ vai ser acionada com o Alt da direita e a barra | com shift alt, nas posições originais que tinham no teclado.<br /></li>
+</ul></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgc1f7a3e" class="outline-3">
+<h3 id="orgc1f7a3e"><span class="section-number-3">1.3.</span> Rede</h3>
+<div class="outline-text-3" id="text-1-3">
+<ul class="org-ul">
+<li>Abre serviço único tcp<br /></li>
+</ul>
+<p>
+{ printf 'HTTP/1.0 200 OK\r\nContent-Length:%d\r\n\r\n' "$(wc -c &lt; org.bla)"; cat org.bla; } | nc -l 8082<br />
+</p>
+
+<ul class="org-ul">
+<li>Shell Reverso<br /></li>
+</ul>
+
+<p>
+Encaminha shell do servidor para a máquina cliente<br />
+</p>
+
+<p>
+&#x2014; NO NC MODERNO NÃO EXITE A OPÇÃO -e<br />
+</p>
+
+<p>
+cliente: nc localhost -lp 8080<br />
+servidor:<br />
+rm -f /tmp/f; mkfifo /tmp/f<br />
+cat /tmp/f | /bin/sh -i 2&gt;&amp;1 | nc -l 127.0.0.1 1234 &gt; /tmp/f<br />
+</p>
+
+<p>
+teste com R<br />
+cat /tmp/f | /usr/bin/R &#x2013;vanilla -i 2&gt;&amp;1 | nc -l 127.0.0.1 1234 &gt; /tmp/f<br />
+</p>
+
+<ul class="org-ul">
+<li><a href="https://www.varonis.com/blog/netcat-commands/">https://www.varonis.com/blog/netcat-commands/</a><br /></li>
+<li><a href="https://www.computerhope.com/unix/nc.htm">https://www.computerhope.com/unix/nc.htm</a><br /></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org0f8c763" class="outline-3">
+<h3 id="org0f8c763"><span class="section-number-3">1.4.</span> Gráficos no terminal</h3>
+<div class="outline-text-3" id="text-1-4">
+<ul class="org-ul">
+<li>cat teste.csv | gnuplot -p -e "set datafile separator ','; plot '&lt; cat -' using 1:2 with lines, '' using 1:3 with lines"<br /></li>
+</ul>
+<p>
+Os dados tem que ser repetidos a cada novo gráfico, por isso para fazer duas linhas ao mesmo tempo, tive que copiar os dados em dois blocos no arquivo, colocando "e" em cada linha depois do bloco:<br />
+1,1,1<br />
+2,2,2<br />
+3,1,3<br />
+4,5,5<br />
+e<br />
+1,1,1<br />
+2,2,2<br />
+3,1,3<br />
+4,5,5<br />
+e<br />
+</p>
+<ul class="org-ul">
+<li><a href="http://hxcaine.com/blog/2013/02/28/running-gnuplot-as-a-live-graph-with-automatic-updates/">Gnuplot em tempo real</a><br /></li>
+<li><a href="https://stackoverflow.com/questions/44470965/how-can-you-watch-gnuplot-realtime-data-plots-as-a-live-graph-with-automatic-up">Gnuplot em tempo real - Stackoverflow</a><br /></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org0f4467f" class="outline-3">
+<h3 id="org0f4467f"><span class="section-number-3">1.5.</span> exibir txt / csv no org</h3>
+<div class="outline-text-3" id="text-1-5">
+<p>
+;;#+BEGIN<sub>SRC</sub> sh :results output<br />
+;;cat ~/oi2.txt | column -t -s";" | less -S<br />
+;;#+END<sub>SRC</sub><br />
+</p>
+</div>
+</div>
+<div id="outline-container-org17a2c9f" class="outline-3">
+<h3 id="org17a2c9f"><span class="section-number-3">1.6.</span> GPU</h3>
+<div class="outline-text-3" id="text-1-6">
+<ul class="org-ul">
+<li><a href="https://linuxhint.com/gpu-programming-cpp/">https://linuxhint.com/gpu-programming-cpp/</a><br /></li>
+<li><a href="http://www.r-tutor.com/gpu-computing">http://www.r-tutor.com/gpu-computing</a><br /></li>
+<li><a href="https://subscription.packtpub.com/book/application_development/9781849692342/1/ch01lvl1sec12/an-example-of-opencl-program">https://subscription.packtpub.com/book/application_development/9781849692342/1/ch01lvl1sec12/an-example-of-opencl-program</a><br /></li>
+<li><a href="https://developer.nvidia.com/blog/accelerate-r-applications-cuda/">https://developer.nvidia.com/blog/accelerate-r-applications-cuda/</a><br /></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orga3b7f6f" class="outline-3">
+<h3 id="orga3b7f6f"><span class="section-number-3">1.7.</span> Curso LISP</h3>
+<div class="outline-text-3" id="text-1-7">
+<ul class="org-ul">
+<li><a href="https://www.tutorialspoint.com/lisp/index.htm">https://www.tutorialspoint.com/lisp/index.htm</a><br /></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgf508b94" class="outline-3">
+<h3 id="orgf508b94"><span class="section-number-3">1.8.</span> bash</h3>
+<div class="outline-text-3" id="text-1-8">
+<ul class="org-ul">
+<li>Copiar para clipboard no bash: &lt;comando&gt;<br /></li>
+<li>GTK+ no bash: <a href="https://www.tecmint.com/gtkdialog-create-graphical-interfaces-and-dialog-boxes/">https://www.tecmint.com/gtkdialog-create-graphical-interfaces-and-dialog-boxes/</a><br /></li>
+
+<li>filtrar parte xml de arquivo excel para pegar tipo de dado e posição no sharedStrings.xml<br /></li>
+</ul>
+
+<p>
+grep -oP '(?&lt;=oads/download/5-assassinatos/).*?(?="&gt;)' assassinatos.txt &gt;&gt; lista.txt<br />
+</p>
+
+<p>
+grep -oh '\w*t=\"[a-z]*\"&gt;&lt;v&gt;[0-9]*&lt;/v&gt;\w*' sheet1.xml | sed -e 's/t=\"<i>/g;s</i>\"&gt;&lt;v&gt;/ /g;s/&lt;\/v&gt;//g'<br />
+</p>
+
+<ul class="org-ul">
+<li>conta ocorrências de um padrão em um arquivo<br /></li>
+</ul>
+<p>
+awk -F";" '{count[$2]++} END {for (word in count) print word, count[word]}' profissionais-120000.csv<br />
+</p>
+
+<p>
+acrescentando pipe sort -k(número da coluna) -n ordena pela coluna de resultado<br />
+</p>
+
+<ul class="org-ul">
+<li>encontrar texto dentro de pdfs<br /></li>
+</ul>
+
+<p>
+Processo é case sensitive<br />
+find /path -name '*.pdf' -exec sh -c 'pdftotext "{}" - | grep &#x2013;with-filename &#x2013;label="{}" &#x2013;color "your pattern"' \;<br />
+</p>
+
+<ul class="org-ul">
+<li>E-mail / Gmail linha de comando<br /></li>
+</ul>
+<p>
+Install it with the following commands:<br />
+</p>
+
+<p>
+sudo apt-get update<br />
+sudo apt-get install ssmtp<br />
+Edit /etc/ssmtp/ssmtp.conf to look like this:<br />
+</p>
+
+<p>
+root=rpi3abc@gmail.com<br />
+mailhub=smtp.gmail.com:465<br />
+FromLineOverride=YES<br />
+AuthUser=rpi3abc@gmail.com<br />
+AuthPass=testing123<br />
+UseTLS=YES<br />
+Send a one-liner like so:<br />
+</p>
+
+<p>
+echo "Testing&#x2026;1&#x2026;2&#x2026;3" | ssmtp myusername@gmail.com<br />
+or<br />
+</p>
+
+<p>
+printf "Subject: Test\n\nTesting&#x2026;1&#x2026;2&#x2026;3" | ssmtp myusername@gmail.com<br />
+</p>
+</div>
+</div>
+
+<div id="outline-container-org82ea265" class="outline-3">
+<h3 id="org82ea265"><span class="section-number-3">1.9.</span> ssh</h3>
+<div class="outline-text-3" id="text-1-9">
+<ul class="org-ul">
+<li>Manter processos rodando depois de fechar o ssh<br />
+<ul class="org-ul">
+<li><a href="https://www.tecmint.com/keep-remote-ssh-sessions-running-after-disconnection/">https://www.tecmint.com/keep-remote-ssh-sessions-running-after-disconnection/</a><br /></li>
+</ul></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org7f095e5" class="outline-3">
+<h3 id="org7f095e5"><span class="section-number-3">1.10.</span> Automatização de web browser</h3>
+<div class="outline-text-3" id="text-1-10">
+<ul class="org-ul">
+<li><a href="http://luizricardo.org/2016/07/automatizando-o-acesso-a-uma-pagina-web-a-k-a-como-eu-burlei-um-sistema-de-agendamentos-online/">http://luizricardo.org/2016/07/automatizando-o-acesso-a-uma-pagina-web-a-k-a-como-eu-burlei-um-sistema-de-agendamentos-online/</a><br /></li>
+<li><a href="https://www.selenium.dev/maven/">https://www.selenium.dev/maven/</a><br /></li>
+<li><a href="https://maven.apache.org/guides/getting-started/maven-in-five-minutes.html">https://maven.apache.org/guides/getting-started/maven-in-five-minutes.html</a><br /></li>
+<li>Não pode esquecer de colocar o driver firefox no path<br /></li>
+<li>sequência de compilação e execução<br />
+<ul class="org-ul">
+<li>mvn package<br /></li>
+<li>mvn exec:java<br /></li>
+</ul></li>
+<li><a href="https://www.scrapingbee.com/blog/introduction-to-chrome-headless/">https://www.scrapingbee.com/blog/introduction-to-chrome-headless/</a><br /></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgecfa544" class="outline-3">
+<h3 id="orgecfa544"><span class="section-number-3">1.11.</span> Vírus, hacks e afins</h3>
+<div class="outline-text-3" id="text-1-11">
+<ul class="org-ul">
+<li><a href="https://github.com/onx/CASCADE">https://github.com/onx/CASCADE</a><br /></li>
+<li><a href="https://cranklin.wordpress.com/2016/12/26/how-to-create-a-virus-using-the-assembly-language/amp/">https://cranklin.wordpress.com/2016/12/26/how-to-create-a-virus-using-the-assembly-language/amp/</a><br /></li>
+<li><a href="http://www.virus-scan-software.com/virus-scan-help/answers/the-history-of-computer-viruses.shtml">http://www.virus-scan-software.com/virus-scan-help/answers/the-history-of-computer-viruses.shtml</a><br /></li>
+<li><a href="https://etbe.coker.com.au/2008/02/27/redirecting-output-from-a-running-process/">Redireciona saída de stdout para arquivo via gdb</a><br /></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org34de82f" class="outline-2">
+<h2 id="org34de82f"><span class="section-number-2">2.</span> R</h2>
+<div class="outline-text-2" id="text-2">
+<ul class="org-ul">
+<li>Rodar como script no shell<br /></li>
+</ul>
+<p>
+incluir #! /usr/bin/Rscript no começo do arquivo<br />
+</p>
+<ul class="org-ul">
+<li>Blocos R no org: <a href="file:///home/pseifer/R/exemplo_block_org_R.html">file:///home/pseifer/R/exemplo_block_org_R.html</a><br /></li>
+<li>Ver em GPU com usar CUDA no R<br /></li>
+<li>Pacotes R<br />
+<ul class="org-ul">
+<li>&#x2014;&gt; <a href="https://www.curso-r.com/blog/2017-11-23-introducao-rcpp/">https://www.curso-r.com/blog/2017-11-23-introducao-rcpp/</a> Curso sobre Rcpp!<br />
+<ul class="org-ul">
+<li><a href="http://www.rcpp.org/">http://www.rcpp.org/</a><br /></li>
+</ul></li>
+<li><a href="https://hilaryparker.com/2014/04/29/writing-an-r-package-from-scratch/">https://hilaryparker.com/2014/04/29/writing-an-r-package-from-scratch/</a><br /></li>
+<li><a href="http://web.mit.edu/insong/www/pdf/rpackage_instructions.pdf">http://web.mit.edu/insong/www/pdf/rpackage_instructions.pdf</a><br /></li>
+<li><a href="https://cran.r-project.org/doc/contrib/Leisch-CreatingPackages.pdf">https://cran.r-project.org/doc/contrib/Leisch-CreatingPackages.pdf</a><br /></li>
+</ul></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org7d0f464" class="outline-2">
+<h2 id="org7d0f464"><span class="section-number-2">3.</span> Emacs</h2>
+<div class="outline-text-2" id="text-3">
+<ul class="org-ul">
+<li><a href="https://orgmode.org/worg/org-glossary.html">https://orgmode.org/worg/org-glossary.html</a><br /></li>
+<li><a href="https://orgmode.org/worg/org-tutorials/org-google-sync.html">https://orgmode.org/worg/org-tutorials/org-google-sync.html</a><br /></li>
+</ul>
+</div>
+<div id="outline-container-org0b2c436" class="outline-3">
+<h3 id="org0b2c436"><span class="section-number-3">3.1.</span> Programação</h3>
+<div class="outline-text-3" id="text-3-1">
+<ul class="org-ul">
+<li><a href="http://ergoemacs.org/emacs/elisp.html">http://ergoemacs.org/emacs/elisp.html</a><br /></li>
+<li><a href="https://www.gnu.org/software/emacs/manual/html_node/elisp/Writing-Emacs-Primitives.html">https://www.gnu.org/software/emacs/manual/html_node/elisp/Writing-Emacs-Primitives.html</a><br /></li>
+<li><a href="https://blog.aaronbieber.com/2016/08/07/getting-started-with-emacs-lisp.html">https://blog.aaronbieber.com/2016/08/07/getting-started-with-emacs-lisp.html</a><br /></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org05bf3ed" class="outline-3">
+<h3 id="org05bf3ed"><span class="section-number-3">3.2.</span> Editar como root</h3>
+<div class="outline-text-3" id="text-3-2">
+<ul class="org-ul">
+<li>Editar como root<br /></li>
+</ul>
+<p>
+C-x-C-f /su::/nome do arquivo<br />
+</p>
+</div>
+</div>
+<div id="outline-container-org4e7192c" class="outline-3">
+<h3 id="org4e7192c"><span class="section-number-3">3.3.</span> Atalho para links</h3>
+<div class="outline-text-3" id="text-3-3">
+<p>
+após criar o link, tem que usar C-c C-c<br />
+</p>
+<p>
+<a href="file:///home/pseifer/tmp/teste.html">file:///home/pseifer/tmp/teste.html</a><br />
+</p>
+</div>
+</div>
+<div id="outline-container-orgca725cd" class="outline-3">
+<h3 id="orgca725cd"><span class="section-number-3">3.4.</span> função configura ambiente</h3>
+<div class="outline-text-3" id="text-3-4">
+<p>
+(defun oi ()<br />
+    (interactive)<br />
+    (split-window-right (floor (* 0.65 (window-width))))<br />
+    (other-window 1)<br />
+    (switch-to-buffer "org.org")<br />
+    (split-window-below (floor (* 0.68 (window-height))))<br />
+    (other-window 2)<br />
+    (split-window-below (floor (* 0.8 (window-height))))<br />
+    (other-window 0)<br />
+    (sql-mysql) ;; usa outra janela aberta como alvo do mysql<br />
+)<br />
+</p>
+
+
+<p>
+<a href="https://ftp.gnu.org/old-gnu/Manuals/elisp-manual-21-2.8/html_node/elisp_451.html">https://ftp.gnu.org/old-gnu/Manuals/elisp-manual-21-2.8/html_node/elisp_451.html</a><br />
+</p>
+</div>
+</div>
+<div id="outline-container-org3f64879" class="outline-3">
+<h3 id="org3f64879"><span class="section-number-3">3.5.</span> Automatizar</h3>
+<div class="outline-text-3" id="text-3-5">
+<ul class="org-ul">
+<li><a href="http://pragmaticemacs.com/emacs/naming-and-saving-macros-for-repetitive-tasks/">http://pragmaticemacs.com/emacs/naming-and-saving-macros-for-repetitive-tasks/</a><br /></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org68f408a" class="outline-3">
+<h3 id="org68f408a"><span class="section-number-3">3.6.</span> Diversos</h3>
+<div class="outline-text-3" id="text-3-6">
+<ul class="org-ul">
+<li>Caminho do arquivo<br /></li>
+</ul>
+
+<p>
+Função que mostra o caminho do arquivo (já no .emacs)<br />
+</p>
+
+<p>
+(defun caminho-do-arquivo()<br />
+  (interactive)<br />
+  (message (buffer-file-name)))<br />
+</p>
+
+<ul class="org-ul">
+<li>Seta o nome do frame para o camino do arquivo (não coloquei no .emacs)<br /></li>
+</ul>
+
+<p>
+(setq frame-title-format<br />
+      (list (format "%s %%S: %%j " (system-name))<br />
+	    '(buffer-file-name "%f" (dired-directory dired-directory "%b"))))<br />
+</p>
+
+<ul class="org-ul">
+<li>Shell command<br /></li>
+</ul>
+
+<p>
+(shell-command (format "libreoffice &#x2013;writer %s" (buffer-file-name (set-buffer "rel<sub>nicolau.org</sub>"))))<br />
+</p>
+
+<p>
+ou<br />
+</p>
+
+<p>
+(shell-command-to-string (format "libreoffice &#x2013;writer %s" (buffer-file-name (set-buffer "rel<sub>nicolau.org</sub>"))))<br />
+</p>
+</div>
+</div>
+<div id="outline-container-org9b1a23b" class="outline-3">
+<h3 id="org9b1a23b"><span class="section-number-3">3.7.</span> Reveal</h3>
+<div class="outline-text-3" id="text-3-7">
+<ul class="org-ul">
+<li><a href="https://github.com/yjwen/org-reveal">https://github.com/yjwen/org-reveal</a><br /></li>
+<li><a href="https://revealjs.com/">https://revealjs.com/</a><br /></li>
+<li><a href="https://opensource.com/article/18/2/how-create-slides-emacs-org-mode-and-revealjs">https://opensource.com/article/18/2/how-create-slides-emacs-org-mode-and-revealjs</a><br /></li>
+<li><a href="https://www.sitepoint.com/css-viewport-units-quick-start/">https://www.sitepoint.com/css-viewport-units-quick-start/</a><br /></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org9cfac03" class="outline-2">
+<h2 id="org9cfac03"><span class="section-number-2">4.</span> Git</h2>
+<div class="outline-text-2" id="text-4">
+<ul class="org-ul">
+<li>Inicialização de novo repositório<br /></li>
+</ul>
+<p>
+<a href="https://github.com/pauloseifer/memoria">https://github.com/pauloseifer/memoria</a><br />
+<a href="https://gist.github.com/xirixiz/b6b0c6f4917ce17a90e00f9b60566278">https://gist.github.com/xirixiz/b6b0c6f4917ce17a90e00f9b60566278</a><br />
+</p>
+
+<p>
+Depois de criar o repositório no github, no diretório em que vai ficar o origin<br />
+</p>
+
+<p>
+git init<br />
+git add README.md (preciso?)<br />
+git branch -M main (lembrar que isto substitui o "master")<br />
+git remote add origin git@github.com:pauloseifer/NOVOREPOSITORIO.git (na página está errado)<br />
+git add -A (para levar tudo)<br />
+git commit -m "comentário"<br />
+git push &#x2013;set-upstream origin main (primeiro push - se escrever errado, no "erro" vem o comando certo)<br />
+git push (para os demais)<br />
+</p>
+
+<ul class="org-ul">
+<li>word/docx<br /></li>
+</ul>
+<p>
+Criar arquivo .gitattributes com conteúdo<br />
+*.docx diff=pandoc<br />
+</p>
+
+<ul class="org-ul">
+<li>git ftp (<a href="https://github.com/git-ftp/git-ftp">https://github.com/git-ftp/git-ftp</a>)<br /></li>
+</ul>
+<p>
+Configurar:<br />
+</p>
+
+<p>
+git config git-ftp.url "<a href="ftp://ftp.example.net/public_html">ftp://ftp.example.net/public_html</a>"<br />
+git config git-ftp.user "ftp-user"<br />
+git config git-ftp.password "secr3t"<br />
+</p>
+
+<p>
+Depois<br />
+git ftp init<br />
+git ftp push<br />
+</p>
+
+<p>
+Para baixar do repositório de outro lugar<br />
+configura como nas linhas acima<br />
+git ftp download<br />
+(não faz merge)<br />
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgff6fa24" class="outline-2">
+<h2 id="orgff6fa24"><span class="section-number-2">5.</span> Criptografia</h2>
+<div class="outline-text-2" id="text-5">
+<ul class="org-ul">
+<li>Teste com gpg ok. O gpg mantém a senha em uma "memória" por alguns minutos. Conveniente caso se esqueça ela, ou registre errado.<br />
+<ul class="org-ul">
+<li>gpg -c arquivo para encriptar<br /></li>
+<li>gpg arquivo.gpg para desencriptar<br /></li>
+</ul></li>
+<li>Teste com ecrypfs ok.<br />
+<ul class="org-ul">
+<li>mount -t diretório diretório (criar diretório com chmod 700)<br /></li>
+<li>inconveninte de ter que montar como root e sempre que montar repetir o mesmo processo de script. Dá pra automatizar.<br /></li>
+<li>Melhor criar partição encriptada (em iso) e montar como loop?<br /></li>
+</ul></li>
+<li>Teste com LUKS interessante<br />
+<ul class="org-ul">
+<li><a href="http://freesoftwaremagazine.com/articles/create_encrypted_disk_image_gnulinux/">http://freesoftwaremagazine.com/articles/create_encrypted_disk_image_gnulinux/</a><br /></li>
+<li>Para usar como usuário o diretório tem que estar no meu diretório, com minhas permissões<br /></li>
+</ul></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="author">Author: Paulo Seifer</p>
+<p class="date">Created: 2024-01-25 qui 18:38</p>
+<p class="validation"><a href="https://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>

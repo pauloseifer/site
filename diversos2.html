@@ -1,0 +1,960 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2023-10-01 dom 16:45 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>&lrm;</title>
+<meta name="author" content="Paulo Seifer" />
+<meta name="generator" content="Org Mode" />
+<style>
+  #content { max-width: 60em; margin: auto; }
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    top: -8px;
+    right: 12px;
+    padding: 3px;
+    color: #555;
+    background-color: #f2f2f299;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { }
+</style>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        displayAlign: "center",
+        displayIndent: "0em",
+
+        "HTML-CSS": { scale: 100,
+                        linebreaks: { automatic: "false" },
+                        webFont: "TeX"
+                       },
+        SVG: {scale: 100,
+              linebreaks: { automatic: "false" },
+              font: "TeX"},
+        NativeMML: {scale: 100},
+        TeX: { equationNumbers: {autoNumber: "AMS"},
+               MultLineWidth: "85%",
+               TagSide: "right",
+               TagIndent: ".8em"
+             }
+});
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_HTML"></script>
+</head>
+<body>
+<div id="content" class="content">
+<div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#orgc650376">1. Diversos</a>
+<ul>
+<li><a href="#orgac48a2b">1.1. OpenStreetMap</a></li>
+<li><a href="#orgdc1d89e">1.2. Instituições e bem-estar</a>
+<ul>
+<li><a href="#org2a7fd04">1.2.1. Boas instituições podem dar resultados não tão bons</a></li>
+</ul>
+</li>
+<li><a href="#orgfa21a72">1.3. biohacking</a></li>
+<li><a href="#org3367ae8">1.4. Tecnologia e Sociedade</a>
+<ul>
+<li><a href="#org0bae631">1.4.1. Crimes virtuais</a></li>
+<li><a href="#org3014fdd">1.4.2. Bitcoin e afins</a></li>
+<li><a href="#org51bf414">1.4.3. Tecnologia antiga x modernidade</a></li>
+<li><a href="#orga9bdfee">1.4.4. </a></li>
+</ul>
+</li>
+<li><a href="#org9efb18d">1.5. Agro/Ecologia</a></li>
+<li><a href="#org730ceb8">1.6. Mercado "Verde"</a></li>
+<li><a href="#org8736ab3">1.7. Sistemas Complexos Adaptativos</a></li>
+<li><a href="#org2a863eb">1.8. Diversos comp</a>
+<ul>
+<li><a href="#org22b996b">1.8.1. MySQL</a></li>
+<li><a href="#orge3ee24b">1.8.2. Diversos</a></li>
+<li><a href="#org05d0b76">1.8.3. Rede</a></li>
+<li><a href="#orga9efaf8">1.8.4. Gráficos no terminal</a></li>
+<li><a href="#orgfe642ec">1.8.5. exibir txt / csv no org</a></li>
+<li><a href="#orgb3ab215">1.8.6. GPU</a></li>
+<li><a href="#orgdaf551c">1.8.7. Curso LISP</a></li>
+<li><a href="#orge14992a">1.8.8. R</a></li>
+<li><a href="#orgc5c700c">1.8.9. bash</a></li>
+<li><a href="#org3e2deb0">1.8.10. ssh</a></li>
+<li><a href="#org588cb15">1.8.11. Automatização de web browser</a></li>
+<li><a href="#orga9114d7">1.8.12. Vírus, hacks e afins</a></li>
+</ul>
+</li>
+<li><a href="#orgd94848c">1.9. Inovação Social</a></li>
+<li><a href="#org48551c4">1.10. Emacs</a>
+<ul>
+<li><a href="#org40c6ece">1.10.1. Programação</a></li>
+<li><a href="#org4851a98">1.10.2. Editar como root</a></li>
+<li><a href="#orgfa4cf53">1.10.3. projeto android no emacs</a></li>
+<li><a href="#org97fa490">1.10.4. Atalho para links</a></li>
+<li><a href="#org3b53445">1.10.5. função mysql</a></li>
+<li><a href="#orgd9e236d">1.10.6. Automatizar</a></li>
+<li><a href="#orgf579749">1.10.7. Diversos</a></li>
+<li><a href="#orgba78bf3">1.10.8. Reveal</a></li>
+</ul>
+</li>
+<li><a href="#org1f15111">1.11. Git</a></li>
+<li><a href="#org48777b1">1.12. CV</a></li>
+<li><a href="#org0e385aa">1.13. Criptografia</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgc650376" class="outline-2">
+<h2 id="orgc650376"><span class="section-number-2">1.</span> Diversos</h2>
+<div class="outline-text-2" id="text-1">
+<ul class="org-ul">
+<li><a href="http://orgmode.org/orgcard.txt">http://orgmode.org/orgcard.txt não está disponível</a></li>
+<li><a href="https://orgmode.org/worg/org-glossary.html">https://orgmode.org/worg/org-glossary.html</a></li>
+<li><a href="https://www.debuggex.com/">Debuga Regex</a></li>
+<li><a href="https://www.fontpalace.com/">https://www.fontpalace.com/</a></li>
+<li><a href="http://www.ipea.gov.br/ods/">ODS IPEA</a></li>
+</ul>
+</div>
+<div id="outline-container-orgac48a2b" class="outline-3">
+<h3 id="orgac48a2b"><span class="section-number-3">1.1.</span> OpenStreetMap</h3>
+<div class="outline-text-3" id="text-1-1">
+<ul class="org-ul">
+<li><a href="https://www.openstreetmap.org/">https://www.openstreetmap.org/</a></li>
+<li><a href="https://download.geofabrik.de/">https://download.geofabrik.de/</a> base já baixada do OSM</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgdc1d89e" class="outline-3">
+<h3 id="orgdc1d89e"><span class="section-number-3">1.2.</span> Instituições e bem-estar</h3>
+<div class="outline-text-3" id="text-1-2">
+</div>
+<div id="outline-container-org2a7fd04" class="outline-4">
+<h4 id="org2a7fd04"><span class="section-number-4">1.2.1.</span> Boas instituições podem dar resultados não tão bons</h4>
+<div class="outline-text-4" id="text-1-2-1">
+<ul class="org-ul">
+<li><a href="file:///home/pseifer/Pesquisas/Instituicoes_bem_estar/VanWey_et_al_Socioeconomic_development_agricultural_intensification_Mato_Grosso_2013.pdf">VanWey<sub>et</sub><sub>al</sub><sub>Socioeconomic</sub><sub>development</sub><sub>agricultural</sub><sub>intensification</sub><sub>Mato</sub><sub>Grosso</sub><sub>2013.pdf</sub></a>
+<ul class="org-ul">
+<li>Busca estabelecer uma relação entre municípios que tem predominância de mais de uma safra por ano com boa qualidade de bem-estar, comparando Lucas do Rio Verde MT e Canarana MT (LRV com dupla safra)
+<ul class="org-ul">
+<li>Bem-estar: mediana da renda e índice de qualidade escolar</li>
+</ul></li>
+<li>Demonstra que nos dois casos o tipo de produção teve boa relação com a qualidade de vida</li>
+<li>Mas faz ressalva para o path dependence
+<ul class="org-ul">
+<li>fica evidente, na construção das trajetórias dos lugares, como as instituições locais e as escolhas de produção acabaram tendo grande influência nos resultados (meu comentário)</li>
+</ul></li>
+</ul></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-orgfa21a72" class="outline-3">
+<h3 id="orgfa21a72"><span class="section-number-3">1.3.</span> biohacking</h3>
+<div class="outline-text-3" id="text-1-3">
+<ul class="org-ul">
+<li><a href="https://www.youtube.com/watch?v=odE8dNcklks&amp;t=492s">https://www.youtube.com/watch?v=odE8dNcklks&amp;t=492s</a></li>
+<li><a href="https://www.youtube.com/watch?v=B75zyFDVPGc">https://www.youtube.com/watch?v=B75zyFDVPGc</a></li>
+<li><a href="https://www.youtube.com/watch?v=GEWJsOheii4&amp;t=309s">https://www.youtube.com/watch?v=GEWJsOheii4&amp;t=309s</a></li>
+<li>Prostética
+<ul class="org-ul">
+<li><a href="https://www.instagram.com/p/Br6hgT2n2AA/?utm_source=ig_share_sheet&amp;igshid=1m5zrdeyymufq">https://www.instagram.com/p/Br6hgT2n2AA/?utm_source=ig_share_sheet&amp;igshid=1m5zrdeyymufq</a></li>
+<li><a href="https://www.youtube.com/watch?v=sk1NkWl_W2Y&amp;t=176s">https://www.youtube.com/watch?v=sk1NkWl_W2Y&amp;t=176s</a></li>
+<li><a href="https://www.youtube.com/watch?v=9NOncx2jU0Q">https://www.youtube.com/watch?v=9NOncx2jU0Q</a></li>
+<li><a href="https://www.youtube.com/watch?v=F_brnKz_2tI">https://www.youtube.com/watch?v=F_brnKz_2tI</a></li>
+<li>honda walking assist devices: <a href="https://www.youtube.com/watch?v=Io3MBpzmVJc">https://www.youtube.com/watch?v=Io3MBpzmVJc</a></li>
+<li>Myo
+<ul class="org-ul">
+<li><a href="https://www.youtube.com/watch?v=0eQf3sWtRj4">https://www.youtube.com/watch?v=0eQf3sWtRj4</a></li>
+<li><a href="https://www.zdnet.com/article/thalmic-labs-shuts-down-myo-gesture-control-armband-project/">https://www.zdnet.com/article/thalmic-labs-shuts-down-myo-gesture-control-armband-project/</a></li>
+</ul></li>
+<li>Hassel Artificial Muscle
+<ul class="org-ul">
+<li><a href="https://www.youtube.com/watch?v=YGMyW6AESsQ">https://www.youtube.com/watch?v=YGMyW6AESsQ</a></li>
+<li><a href="https://news.nationalgeographic.com/2018/01/university-scientists-create-artificial-muscle-hasel-actuator-spd/">https://news.nationalgeographic.com/2018/01/university-scientists-create-artificial-muscle-hasel-actuator-spd/</a></li>
+<li>origami: <a href="https://www.youtube.com/watch?v=Ir69MXyOvFs">https://www.youtube.com/watch?v=Ir69MXyOvFs</a></li>
+</ul></li>
+</ul></li>
+<li><a href="#org05ee3de">1.4.4</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org3367ae8" class="outline-3">
+<h3 id="org3367ae8"><span class="section-number-3">1.4.</span> Tecnologia e Sociedade</h3>
+<div class="outline-text-3" id="text-1-4">
+</div>
+<div id="outline-container-org0bae631" class="outline-4">
+<h4 id="org0bae631"><span class="section-number-4">1.4.1.</span> Crimes virtuais</h4>
+<div class="outline-text-4" id="text-1-4-1">
+<ul class="org-ul">
+<li><a href="https://arstechnica.com/information-technology/2018/12/how-3ves-bgp-hijackers-eluded-the-internet-and-made-29m/">3ve - Ars Technica</a></li>
+<li><a href="https://www.youtube.com/watch?v=vOj-tRTbFfY&amp;feature=youtu.be">Scammers Amazon Wall Street Journal</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org3014fdd" class="outline-4">
+<h4 id="org3014fdd"><span class="section-number-4">1.4.2.</span> Bitcoin e afins</h4>
+<div class="outline-text-4" id="text-1-4-2">
+<ul class="org-ul">
+<li><a href="https://www.youtube.com/watch?v=bBC-nXj3Ng4">3Blue1Brown Cryptocurrencies</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org51bf414" class="outline-4">
+<h4 id="org51bf414"><span class="section-number-4">1.4.3.</span> Tecnologia antiga x modernidade</h4>
+<div class="outline-text-4" id="text-1-4-3">
+<ul class="org-ul">
+<li><a href="https://www.youtube.com/watch?v=5FmZ0z49Dgs&amp;feature=youtu.be">Invenções perdidas com o tempo - Joe Scott</a>
+Como no caso das técnicas antigas de cultivo que se perderam na idade média</li>
+<li><a href="https://www.bbc.com/portuguese/revista/vert_earth/2016/05/160512_vert_earth_pegadas_humanas_fd">Conhecimento antigo utilizado em lugar - ou conjunto - com a tecnologia</a>
+Rastreadores Namíbios auxiliam pesquisadores a compreender pegadas fósseis</li>
+<li><a href="https://www.youtube.com/watch?v=fw7fsd_ASOg">Empregos que sumiram com a tecnologia - Joe Scott</a></li>
+<li><a href="https://www.youtube.com/watch?v=F8JCh0owT4w&amp;fbclid=IwAR1z49m7-i50p2e1sTUbn2pdQhttvB_1w7IAoO82Qk1d8gshZpv_Y7e0fKU">Produtores americanos contra proteção de software de maquinários agrícola da John Deere - Hacking de software de tratores</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orga9bdfee" class="outline-4">
+<h4 id="orga9bdfee"><span class="section-number-4">1.4.4.</span> <a id="org05ee3de"></a></h4>
+<div class="outline-text-4" id="text-1-4-4">
+<ul class="org-ul">
+<li><a href="https://www.youtube.com/watch?v=iMtXqTmfta0&amp;feature=youtu.be">Biomimética Vox</a></li>
+<li><a href="http://biomimetics.mit.edu/research">Biomimetic Robotics Lab MIT</a></li>
+<li><a href="https://news.nationalgeographic.com/news/energy/2012/04/pictures/120419-biomimicry-for-energy/">National Geographic - Biomimicry Pictures</a></li>
+<li>Fog standing beetle
+<ul class="org-ul">
+<li><a href="https://www.youtube.com/watch?v=TmyfqjXOf7M">Vídeo Wired</a></li>
+<li><a href="https://www.bbc.com/news/science-environment-35650518">Artigo BBC</a></li>
+</ul></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org9efb18d" class="outline-3">
+<h3 id="org9efb18d"><span class="section-number-3">1.5.</span> Agro/Ecologia</h3>
+<div class="outline-text-3" id="text-1-5">
+<ul class="org-ul">
+<li><a href="https://landinstitute.org/">Land Institute</a></li>
+<li><a href="https://www.agendagotsch.com/ernst-gotsch/">Agenda Gotsch</a></li>
+<li><a href="https://www.ipcc-nggip.iges.or.jp/public/2006gl/">2006 IPCC Guidelines for National Greenhouse Gas Inventories</a></li>
+<li><a href="http://adaptaclima.mma.gov.br/">http://adaptaclima.mma.gov.br/</a></li>
+<li><a href="https://www.embrapa.br/busca-de-noticias/-/noticia/42060948/comunidades-tradicionais-contribuem-para-o-meio-ambiente-global">Comunidades tradicionais contribuem para o meio ambiente</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org730ceb8" class="outline-3">
+<h3 id="org730ceb8"><span class="section-number-3">1.6.</span> Mercado "Verde"</h3>
+<div class="outline-text-3" id="text-1-6">
+<ul class="org-ul">
+<li>Títulos Verdes, Marrons e Azuis <a href="https://exame.com/invest/esg/titulos-verdes-azuis-e-marrons-o-arco-iris-das-financas-sustentaveis/">https://exame.com/invest/esg/titulos-verdes-azuis-e-marrons-o-arco-iris-das-financas-sustentaveis/</a></li>
+<li><a href="https://www.nationalgeographicbrasil.com/meio-ambiente/2020/02/o-que-e-o-mercado-de-carbono-e-como-o-brasil-pode-se-beneficiar-com-ele">https://www.nationalgeographicbrasil.com/meio-ambiente/2020/02/o-que-e-o-mercado-de-carbono-e-como-o-brasil-pode-se-beneficiar-com-ele</a></li>
+<li><a href="https://opetroleo.com.br/mercado-de-carbono-cresce-no-brasil/">https://opetroleo.com.br/mercado-de-carbono-cresce-no-brasil/</a></li>
+<li><a href="https://www.camara.leg.br/noticias/732676-deputados-e-especialistas-discutem-regulamentacao-do-mercado-brasileiro-de-creditos-de-carbono/">https://www.camara.leg.br/noticias/732676-deputados-e-especialistas-discutem-regulamentacao-do-mercado-brasileiro-de-creditos-de-carbono/</a></li>
+<li><a href="https://www.agrolink.com.br/noticias/titulos-verdes-sao-aliados-do-agronegocio_447629.html">https://www.agrolink.com.br/noticias/titulos-verdes-sao-aliados-do-agronegocio_447629.html</a></li>
+<li><a href="https://economia.estadao.com.br/noticias/geral,titulos-verdes-passam-a-ter-mais-lastro,70003661821">https://economia.estadao.com.br/noticias/geral,titulos-verdes-passam-a-ter-mais-lastro,70003661821</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org8736ab3" class="outline-3">
+<h3 id="org8736ab3"><span class="section-number-3">1.7.</span> Sistemas Complexos Adaptativos</h3>
+<div class="outline-text-3" id="text-1-7">
+<ul class="org-ul">
+<li><a href="https://www.quora.com/What-book-s-on-complex-systems-would-you-most-likely-recommend-and-why">https://www.quora.com/What-book-s-on-complex-systems-would-you-most-likely-recommend-and-why</a></li>
+<li><a href="https://www.amazon.com/Complex-Adaptive-Systems-Introduction-Computational/dp/0691127026/ref=cm_cr_arp_d_product_top?ie=UTF8">https://www.amazon.com/Complex-Adaptive-Systems-Introduction-Computational/dp/0691127026/ref=cm_cr_arp_d_product_top?ie=UTF8</a></li>
+<li><a href="https://www.amazon.com/The-Perfect-Swarm-Complexity-Everyday/dp/B006OI06KG/ref=sr_1_1?ie=UTF8&amp;qid=1332015488&amp;s=books&amp;sr=1-1">https://www.amazon.com/The-Perfect-Swarm-Complexity-Everyday/dp/B006OI06KG/ref=sr_1_1?ie=UTF8&amp;qid=1332015488&amp;s=books&amp;sr=1-1</a></li>
+<li><a href="http://fuchs.uti.at/">http://fuchs.uti.at/</a> (Sociologia + CAS)</li>
+<li><a href="https://www.researchgate.net/scientific-contributions/2058056490_Alvaro_Malaina">https://www.researchgate.net/scientific-contributions/2058056490_Alvaro_Malaina</a> (Sociologia + CAS)</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org2a863eb" class="outline-3">
+<h3 id="org2a863eb"><span class="section-number-3">1.8.</span> Diversos comp</h3>
+<div class="outline-text-3" id="text-1-8">
+<ul class="org-ul">
+<li><a href="file:///home/pseifer/Diversos/Comp/testes_revealjs.html">file:///home/pseifer/Diversos/Comp/testes_revealjs.html</a></li>
+</ul>
+</div>
+<div id="outline-container-org22b996b" class="outline-4">
+<h4 id="org22b996b"><span class="section-number-4">1.8.1.</span> MySQL</h4>
+<div class="outline-text-4" id="text-1-8-1">
+<ul class="org-ul">
+<li>Senha root (logado como root): mysqladmin -u root password senha</li>
+<li>no mysql: CREATE USER 'pseifer'@'localhost' IDENTIFIED BY senha;</li>
+<li>todos privilégios: GRANT ALL PRIVILEGES ON <b>.</b> TO 'pseifer'@'localhost';</li>
+<li>Para acesso externo:
+<ul class="org-ul">
+<li><a href="https://phoenixnap.com/kb/mysql-remote-connection">https://phoenixnap.com/kb/mysql-remote-connection</a></li>
+<li>CREATE USER 'myuser'@'localhost' IDENTIFIED BY 'mypass';</li>
+<li>CREATE USER 'myuser'@'%' IDENTIFIED BY 'mypass';</li>
+<li>GRANT ALL ON <b>.</b> TO 'myuser'@'localhost';</li>
+<li>GRANT ALL ON <b>.</b> TO 'myuser'@'%';</li>
+<li>FLUSH PRIVILEGES;</li>
+</ul></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orge3ee24b" class="outline-4">
+<h4 id="orge3ee24b"><span class="section-number-4">1.8.2.</span> Diversos</h4>
+<div class="outline-text-4" id="text-1-8-2">
+<ul class="org-ul">
+<li><a href="https://www.guru99.com/practical-code-examples-using-javascript.html">https://www.guru99.com/practical-code-examples-using-javascript.html</a></li>
+<li><a href="https://www.w3schools.com/js/js_examples.asp">https://www.w3schools.com/js/js_examples.asp</a></li>
+<li><a href="https://www.w3schools.com/graphics/canvas_drawing.asp">https://www.w3schools.com/graphics/canvas_drawing.asp</a></li>
+<li>Mudar o mapa de teclado do surface:
+<ul class="org-ul">
+<li>no arquivo /usr/share/X11/xkb/symbols/br mudar a linha:</li>
+<li>key &lt;BKSL&gt; { [ bracketright,     braceright,    backslash,             bar ] };</li>
+<li>com essa mudança a barra \ vai ser acionada com o Alt da direita e a barra | com shift alt, nas posições originais que tinham no teclado.</li>
+</ul></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org05d0b76" class="outline-4">
+<h4 id="org05d0b76"><span class="section-number-4">1.8.3.</span> Rede</h4>
+<div class="outline-text-4" id="text-1-8-3">
+<ul class="org-ul">
+<li>Abre serviço único tcp</li>
+</ul>
+<p>
+{ printf 'HTTP/1.0 200 OK\r\nContent-Length:%d\r\n\r\n' "$(wc -c &lt; org.bla)"; cat org.bla; } | nc -l 8082  
+</p>
+
+<ul class="org-ul">
+<li>Shell Reverso</li>
+</ul>
+
+<p>
+Encaminha shell do servidor para a máquina cliente
+</p>
+
+<p>
+&#x2014; NO NC MODERNO NÃO EXITE A OPÇÃO -e
+</p>
+
+<p>
+cliente: nc localhost -lp 8080
+servidor: 
+rm -f /tmp/f; mkfifo /tmp/f
+cat /tmp/f | /bin/sh -i 2&gt;&amp;1 | nc -l 127.0.0.1 1234 &gt; /tmp/f
+</p>
+
+<p>
+teste com R
+cat /tmp/f | /usr/bin/R &#x2013;vanilla -i 2&gt;&amp;1 | nc -l 127.0.0.1 1234 &gt; /tmp/f
+</p>
+
+<ul class="org-ul">
+<li><a href="https://www.varonis.com/blog/netcat-commands/">https://www.varonis.com/blog/netcat-commands/</a></li>
+<li><a href="https://www.computerhope.com/unix/nc.htm">https://www.computerhope.com/unix/nc.htm</a></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orga9efaf8" class="outline-4">
+<h4 id="orga9efaf8"><span class="section-number-4">1.8.4.</span> Gráficos no terminal</h4>
+<div class="outline-text-4" id="text-1-8-4">
+<ul class="org-ul">
+<li>cat teste.csv | gnuplot -p -e "set datafile separator ','; plot '&lt; cat -' using 1:2 with lines, '' using 1:3 with lines"</li>
+</ul>
+<p>
+Os dados tem que ser repetidos a cada novo gráfico, por isso para fazer duas linhas ao mesmo tempo, tive que copiar os dados em dois blocos no arquivo, colocando "e" em cada linha depois do bloco: 
+1,1,1
+2,2,2
+3,1,3
+4,5,5
+e
+1,1,1
+2,2,2
+3,1,3
+4,5,5
+e
+</p>
+<ul class="org-ul">
+<li><a href="http://hxcaine.com/blog/2013/02/28/running-gnuplot-as-a-live-graph-with-automatic-updates/">Gnuplot em tempo real</a></li>
+<li><a href="https://stackoverflow.com/questions/44470965/how-can-you-watch-gnuplot-realtime-data-plots-as-a-live-graph-with-automatic-up">Gnuplot em tempo real - Stackoverflow</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgfe642ec" class="outline-4">
+<h4 id="orgfe642ec"><span class="section-number-4">1.8.5.</span> exibir txt / csv no org</h4>
+<div class="outline-text-4" id="text-1-8-5">
+<p>
+;;#+BEGIN<sub>SRC</sub> sh :results output
+;;cat ~/oi2.txt | column -t -s";" | less -S
+;;#+END<sub>SRC</sub>
+</p>
+</div>
+</div>
+<div id="outline-container-orgb3ab215" class="outline-4">
+<h4 id="orgb3ab215"><span class="section-number-4">1.8.6.</span> GPU</h4>
+<div class="outline-text-4" id="text-1-8-6">
+<p>
+CUDA instalado em <span class="timestamp-wrapper"><span class="timestamp">[2020-08-02 dom] </span></span> 
+</p>
+
+<ul class="org-ul">
+<li><a href="https://linuxhint.com/gpu-programming-cpp/">https://linuxhint.com/gpu-programming-cpp/</a></li>
+<li><a href="http://www.r-tutor.com/gpu-computing">http://www.r-tutor.com/gpu-computing</a></li>
+<li><a href="https://subscription.packtpub.com/book/application_development/9781849692342/1/ch01lvl1sec12/an-example-of-opencl-program">https://subscription.packtpub.com/book/application_development/9781849692342/1/ch01lvl1sec12/an-example-of-opencl-program</a></li>
+<li><a href="https://developer.nvidia.com/blog/accelerate-r-applications-cuda/">https://developer.nvidia.com/blog/accelerate-r-applications-cuda/</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgdaf551c" class="outline-4">
+<h4 id="orgdaf551c"><span class="section-number-4">1.8.7.</span> Curso LISP</h4>
+<div class="outline-text-4" id="text-1-8-7">
+<ul class="org-ul">
+<li><a href="https://www.tutorialspoint.com/lisp/index.htm">https://www.tutorialspoint.com/lisp/index.htm</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orge14992a" class="outline-4">
+<h4 id="orge14992a"><span class="section-number-4">1.8.8.</span> R</h4>
+<div class="outline-text-4" id="text-1-8-8">
+<ul class="org-ul">
+<li>Rodar como script no shell</li>
+</ul>
+<p>
+incluir #! /usr/bin/Rscript no começo do arquivo
+</p>
+<ul class="org-ul">
+<li>Blocos R no org: <a href="file:///home/pseifer/R/exemplo_block_org_R.html">file:///home/pseifer/R/exemplo_block_org_R.html</a></li>
+<li>Ver em GPU com usar CUDA no R</li>
+<li>Pacotes R
+<ul class="org-ul">
+<li>&#x2014;&gt; <a href="https://www.curso-r.com/blog/2017-11-23-introducao-rcpp/">https://www.curso-r.com/blog/2017-11-23-introducao-rcpp/</a> Curso sobre Rcpp!
+<ul class="org-ul">
+<li><a href="http://www.rcpp.org/">http://www.rcpp.org/</a></li>
+</ul></li>
+<li><a href="https://hilaryparker.com/2014/04/29/writing-an-r-package-from-scratch/">https://hilaryparker.com/2014/04/29/writing-an-r-package-from-scratch/</a></li>
+<li><a href="http://web.mit.edu/insong/www/pdf/rpackage_instructions.pdf">http://web.mit.edu/insong/www/pdf/rpackage_instructions.pdf</a></li>
+<li><a href="https://cran.r-project.org/doc/contrib/Leisch-CreatingPackages.pdf">https://cran.r-project.org/doc/contrib/Leisch-CreatingPackages.pdf</a></li>
+</ul></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgc5c700c" class="outline-4">
+<h4 id="orgc5c700c"><span class="section-number-4">1.8.9.</span> bash</h4>
+<div class="outline-text-4" id="text-1-8-9">
+<ul class="org-ul">
+<li>Copiar para clipboard no bash: &lt;comando&gt;</li>
+<li>GTK+ no bash: <a href="https://www.tecmint.com/gtkdialog-create-graphical-interfaces-and-dialog-boxes/">https://www.tecmint.com/gtkdialog-create-graphical-interfaces-and-dialog-boxes/</a></li>
+
+<li>filtrar parte xml de arquivo excel para pegar tipo de dado e posição no sharedStrings.xml</li>
+</ul>
+
+<p>
+grep -oP '(?&lt;=oads/download/5-assassinatos/).*?(?="&gt;)' assassinatos.txt &gt;&gt; lista.txt
+</p>
+
+<p>
+grep -oh '\w*t=\"[a-z]*\"&gt;&lt;v&gt;[0-9]*&lt;/v&gt;\w*' sheet1.xml | sed -e 's/t=\"<i>/g;s</i>\"&gt;&lt;v&gt;/ /g;s/&lt;\/v&gt;//g'
+</p>
+
+<ul class="org-ul">
+<li>conta ocorrências de um padrão em um arquivo</li>
+</ul>
+<p>
+awk -F";" '{count[$2]++} END {for (word in count) print word, count[word]}' profissionais-120000.csv 
+</p>
+
+<p>
+acrescentando pipe sort -k(número da coluna) -n ordena pela coluna de resultado
+</p>
+
+<ul class="org-ul">
+<li>encontrar texto dentro de pdfs</li>
+</ul>
+
+<p>
+Processo é case sensitive
+find /path -name '*.pdf' -exec sh -c 'pdftotext "{}" - | grep &#x2013;with-filename &#x2013;label="{}" &#x2013;color "your pattern"' \;
+</p>
+
+<ul class="org-ul">
+<li>E-mail / Gmail linha de comando</li>
+</ul>
+<p>
+Install it with the following commands:
+</p>
+
+<p>
+sudo apt-get update
+sudo apt-get install ssmtp
+Edit /etc/ssmtp/ssmtp.conf to look like this:
+</p>
+
+<p>
+root=rpi3abc@gmail.com
+mailhub=smtp.gmail.com:465
+FromLineOverride=YES
+AuthUser=rpi3abc@gmail.com
+AuthPass=testing123
+UseTLS=YES
+Send a one-liner like so:
+</p>
+
+<p>
+echo "Testing&#x2026;1&#x2026;2&#x2026;3" | ssmtp myusername@gmail.com
+or
+</p>
+
+<p>
+printf "Subject: Test\n\nTesting&#x2026;1&#x2026;2&#x2026;3" | ssmtp myusername@gmail.com
+</p>
+</div>
+</div>
+
+<div id="outline-container-org3e2deb0" class="outline-4">
+<h4 id="org3e2deb0"><span class="section-number-4">1.8.10.</span> ssh</h4>
+<div class="outline-text-4" id="text-1-8-10">
+<ul class="org-ul">
+<li>Manter processos rodando depois de fechar o ssh
+<ul class="org-ul">
+<li><a href="https://www.tecmint.com/keep-remote-ssh-sessions-running-after-disconnection/">https://www.tecmint.com/keep-remote-ssh-sessions-running-after-disconnection/</a></li>
+</ul></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org588cb15" class="outline-4">
+<h4 id="org588cb15"><span class="section-number-4">1.8.11.</span> Automatização de web browser</h4>
+<div class="outline-text-4" id="text-1-8-11">
+<ul class="org-ul">
+<li><a href="http://luizricardo.org/2016/07/automatizando-o-acesso-a-uma-pagina-web-a-k-a-como-eu-burlei-um-sistema-de-agendamentos-online/">http://luizricardo.org/2016/07/automatizando-o-acesso-a-uma-pagina-web-a-k-a-como-eu-burlei-um-sistema-de-agendamentos-online/</a></li>
+<li><a href="https://www.selenium.dev/maven/">https://www.selenium.dev/maven/</a></li>
+<li><a href="https://maven.apache.org/guides/getting-started/maven-in-five-minutes.html">https://maven.apache.org/guides/getting-started/maven-in-five-minutes.html</a></li>
+<li>Não pode esquecer de colocar o driver firefox no path</li>
+<li>sequência de compilação e execução
+<ul class="org-ul">
+<li>mvn package</li>
+<li>mvn exec:java</li>
+</ul></li>
+<li><a href="https://www.scrapingbee.com/blog/introduction-to-chrome-headless/">https://www.scrapingbee.com/blog/introduction-to-chrome-headless/</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orga9114d7" class="outline-4">
+<h4 id="orga9114d7"><span class="section-number-4">1.8.12.</span> Vírus, hacks e afins</h4>
+<div class="outline-text-4" id="text-1-8-12">
+<ul class="org-ul">
+<li><a href="https://github.com/onx/CASCADE">https://github.com/onx/CASCADE</a></li>
+<li><a href="https://cranklin.wordpress.com/2016/12/26/how-to-create-a-virus-using-the-assembly-language/amp/">https://cranklin.wordpress.com/2016/12/26/how-to-create-a-virus-using-the-assembly-language/amp/</a></li>
+<li><a href="http://www.virus-scan-software.com/virus-scan-help/answers/the-history-of-computer-viruses.shtml">http://www.virus-scan-software.com/virus-scan-help/answers/the-history-of-computer-viruses.shtml</a></li>
+<li><a href="https://etbe.coker.com.au/2008/02/27/redirecting-output-from-a-running-process/">Redireciona saída de stdout para arquivo via gdb</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-orgd94848c" class="outline-3">
+<h3 id="orgd94848c"><span class="section-number-3">1.9.</span> Inovação Social</h3>
+<div class="outline-text-3" id="text-1-9">
+<ul class="org-ul">
+<li><a href="https://www.gsb.stanford.edu/faculty-research/centers-initiatives/csi/research">Social Innovation Research - Stanford</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org48551c4" class="outline-3">
+<h3 id="org48551c4"><span class="section-number-3">1.10.</span> Emacs</h3>
+<div class="outline-text-3" id="text-1-10">
+<ul class="org-ul">
+<li><a href="https://orgmode.org/worg/org-glossary.html">https://orgmode.org/worg/org-glossary.html</a></li>
+<li><a href="https://orgmode.org/worg/org-tutorials/org-google-sync.html">https://orgmode.org/worg/org-tutorials/org-google-sync.html</a></li>
+</ul>
+</div>
+<div id="outline-container-org40c6ece" class="outline-4">
+<h4 id="org40c6ece"><span class="section-number-4">1.10.1.</span> Programação</h4>
+<div class="outline-text-4" id="text-1-10-1">
+<ul class="org-ul">
+<li><a href="http://ergoemacs.org/emacs/elisp.html">http://ergoemacs.org/emacs/elisp.html</a></li>
+<li><a href="https://www.gnu.org/software/emacs/manual/html_node/elisp/Writing-Emacs-Primitives.html">https://www.gnu.org/software/emacs/manual/html_node/elisp/Writing-Emacs-Primitives.html</a></li>
+<li><a href="https://blog.aaronbieber.com/2016/08/07/getting-started-with-emacs-lisp.html">https://blog.aaronbieber.com/2016/08/07/getting-started-with-emacs-lisp.html</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org4851a98" class="outline-4">
+<h4 id="org4851a98"><span class="section-number-4">1.10.2.</span> Editar como root</h4>
+<div class="outline-text-4" id="text-1-10-2">
+<ul class="org-ul">
+<li>Editar como root</li>
+</ul>
+<p>
+C-x-C-f /su::/nome do arquivo
+</p>
+</div>
+</div>
+<div id="outline-container-orgfa4cf53" class="outline-4">
+<h4 id="orgfa4cf53"><span class="section-number-4">1.10.3.</span> projeto android no emacs</h4>
+<div class="outline-text-4" id="text-1-10-3">
+<ul class="org-ul">
+<li><a href="http://blog.refu.co/?p=1242">http://blog.refu.co/?p=1242</a></li>
+<li><a href="https://yannik520.github.io/emacs_android.html">https://yannik520.github.io/emacs_android.html</a></li>
+</ul>
+
+<p>
+Nenhum dos dois funciona porque o Sdk não funciona mais em linha de comando
+</p>
+</div>
+</div>
+<div id="outline-container-org97fa490" class="outline-4">
+<h4 id="org97fa490"><span class="section-number-4">1.10.4.</span> Atalho para links</h4>
+<div class="outline-text-4" id="text-1-10-4">
+<p>
+após criar o link, tem que usar C-c C-c 
+</p>
+<p>
+<a href="file:///home/pseifer/tmp/teste.html">file:///home/pseifer/tmp/teste.html</a>
+</p>
+</div>
+</div>
+<div id="outline-container-org3b53445" class="outline-4">
+<h4 id="org3b53445"><span class="section-number-4">1.10.5.</span> função mysql</h4>
+<div class="outline-text-4" id="text-1-10-5">
+<p>
+(defun oi ()
+    (interactive)
+    (split-window-right (floor (* 0.65 (window-width))))
+    (other-window 1)
+    (switch-to-buffer "org.org")
+    (split-window-below (floor (* 0.68 (window-height))))
+    (other-window 2)
+    (split-window-below (floor (* 0.8 (window-height))))
+    (other-window 0)
+    (sql-mysql) ;; usa outra janela aberta como alvo do mysql
+)
+</p>
+
+
+<p>
+<a href="https://ftp.gnu.org/old-gnu/Manuals/elisp-manual-21-2.8/html_node/elisp_451.html">https://ftp.gnu.org/old-gnu/Manuals/elisp-manual-21-2.8/html_node/elisp_451.html</a>
+</p>
+</div>
+</div>
+<div id="outline-container-orgd9e236d" class="outline-4">
+<h4 id="orgd9e236d"><span class="section-number-4">1.10.6.</span> Automatizar</h4>
+<div class="outline-text-4" id="text-1-10-6">
+<ul class="org-ul">
+<li><a href="http://pragmaticemacs.com/emacs/naming-and-saving-macros-for-repetitive-tasks/">http://pragmaticemacs.com/emacs/naming-and-saving-macros-for-repetitive-tasks/</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgf579749" class="outline-4">
+<h4 id="orgf579749"><span class="section-number-4">1.10.7.</span> Diversos</h4>
+<div class="outline-text-4" id="text-1-10-7">
+<ul class="org-ul">
+<li>Caminho do arquivo</li>
+</ul>
+<p>
+Função que mostra o caminho do arquivo (já no .emacs)
+(defun caminho-do-arquivo()
+  (interactive)
+  (message (buffer-file-name)))
+</p>
+
+<p>
+Seta o nome do frame para o camino do arquivo (não coloquei no .emacs)
+(setq frame-title-format
+      (list (format "%s %%S: %%j " (system-name))
+	    '(buffer-file-name "%f" (dired-directory dired-directory "%b"))))
+</p>
+<ul class="org-ul">
+<li>Shell command</li>
+</ul>
+<p>
+(shell-command (format "libreoffice &#x2013;writer %s" (buffer-file-name (set-buffer "rel<sub>nicolau.org</sub>"))))
+</p>
+
+<p>
+ou 
+</p>
+
+<p>
+(shell-command-to-string (format "libreoffice &#x2013;writer %s" (buffer-file-name (set-buffer "rel<sub>nicolau.org</sub>"))))
+</p>
+</div>
+</div>
+<div id="outline-container-orgba78bf3" class="outline-4">
+<h4 id="orgba78bf3"><span class="section-number-4">1.10.8.</span> Reveal</h4>
+<div class="outline-text-4" id="text-1-10-8">
+<ul class="org-ul">
+<li><a href="https://github.com/yjwen/org-reveal">https://github.com/yjwen/org-reveal</a></li>
+<li><a href="https://revealjs.com/">https://revealjs.com/</a></li>
+<li><a href="https://opensource.com/article/18/2/how-create-slides-emacs-org-mode-and-revealjs">https://opensource.com/article/18/2/how-create-slides-emacs-org-mode-and-revealjs</a></li>
+<li><a href="https://www.sitepoint.com/css-viewport-units-quick-start/">https://www.sitepoint.com/css-viewport-units-quick-start/</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org1f15111" class="outline-3">
+<h3 id="org1f15111"><span class="section-number-3">1.11.</span> Git</h3>
+<div class="outline-text-3" id="text-1-11">
+<ul class="org-ul">
+<li>Inicialização de novo repositório</li>
+</ul>
+<p>
+<a href="https://github.com/pauloseifer/memoria">https://github.com/pauloseifer/memoria</a>
+<a href="https://gist.github.com/xirixiz/b6b0c6f4917ce17a90e00f9b60566278">https://gist.github.com/xirixiz/b6b0c6f4917ce17a90e00f9b60566278</a>
+</p>
+
+<p>
+Depois de criar o repositório no github, no diretório em que vai ficar o origin
+</p>
+
+<p>
+git init
+git add README.md (preciso?)
+git branch -M main (lembrar que isto substitui o "master")
+git remote add origin git@github.com:pauloseifer/NOVOREPOSITORIO.git (na página está errado)
+git add -A (para levar tudo)
+git commit -m "comentário"
+git push &#x2013;set-upstream origin main (primeiro push - se escrever errado, no "erro" vem o comando certo)
+git push (para os demais)
+</p>
+
+<ul class="org-ul">
+<li>word/docx</li>
+</ul>
+<p>
+Criar arquivo .gitattributes com conteúdo
+*.docx diff=pandoc
+</p>
+
+<ul class="org-ul">
+<li>git ftp (<a href="https://github.com/git-ftp/git-ftp">https://github.com/git-ftp/git-ftp</a>)</li>
+</ul>
+<p>
+Configurar:
+</p>
+
+<p>
+git config git-ftp.url "<a href="ftp://ftp.example.net/public_html">ftp://ftp.example.net/public_html</a>"
+git config git-ftp.user "ftp-user"
+git config git-ftp.password "secr3t"
+</p>
+
+<p>
+Depois 
+git ftp init
+git ftp push
+</p>
+
+<p>
+Para baixar do repositório de outro lugar
+configura como nas linhas acima 
+git ftp download
+(não faz merge)
+</p>
+</div>
+</div>
+
+<div id="outline-container-org48777b1" class="outline-3">
+<h3 id="org48777b1"><span class="section-number-3">1.12.</span> CV</h3>
+<div class="outline-text-3" id="text-1-12">
+<ul class="org-ul">
+<li><a href="file:///home/pseifer/Documentos/Curriculum_Vitae-Paulo_Guilherme_Seifer.pdf">file:///home/pseifer/Documentos/Curriculum_Vitae-Paulo_Guilherme_Seifer.pdf</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org0e385aa" class="outline-3">
+<h3 id="org0e385aa"><span class="section-number-3">1.13.</span> Criptografia</h3>
+<div class="outline-text-3" id="text-1-13">
+<ul class="org-ul">
+<li>Teste com gpg ok. O gpg mantém a senha em uma "memória" por alguns minutos. Conveniente caso se esqueça ela, ou registre errado.
+<ul class="org-ul">
+<li>gpg -c arquivo para encriptar</li>
+<li>gpg arquivo.gpg para desencriptar</li>
+</ul></li>
+<li>Teste com ecrypfs ok.
+<ul class="org-ul">
+<li>mount -t diretório diretório (criar diretório com chmod 700)</li>
+<li>inconveninte de ter que montar como root e sempre que montar repetir o mesmo processo de script. Dá pra automatizar.</li>
+<li>Melhor criar partição encriptada (em iso) e montar como loop?</li>
+</ul></li>
+<li>Teste com LUKS interessante
+<ul class="org-ul">
+<li><a href="http://freesoftwaremagazine.com/articles/create_encrypted_disk_image_gnulinux/">http://freesoftwaremagazine.com/articles/create_encrypted_disk_image_gnulinux/</a></li>
+<li>Para usar como usuário o diretório tem que estar no meu diretório, com minhas permissões</li>
+</ul></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="author">Author: Paulo Seifer</p>
+<p class="date">Created: 2023-10-01 dom 16:45</p>
+<p class="validation"><a href="https://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>

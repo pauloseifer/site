@@ -1,0 +1,11 @@
+  **** Site pessoal ****
+
+- Bookmark
+  - acrescentar ids para os sites e referenciar por ids
+  - desenvolver parte de deleção de sites e grupos
+    - checkbox ao invés de radiobutton
+    - referência pelos ids -> GR1-1, por exemplo
+  - modificar para recarga dinâmica do bookmark
+    - acrescentar um <div name="bookmark"> </div> e inserir nele?
+    
+

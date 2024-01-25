@@ -42,6 +42,10 @@
       "GR_2_6": {
          "site": "https://www.ibama.gov.br/component/legislacao/?view=legislacao&legislacao=133565",
          "descrição": "Resolução Conama 462, de 24 de julho de 2014"
+      },
+      "GR_2_7": {
+         "site": "https://www.ipea.gov.br/ods/",
+         "descrição": "ODS IPEA"
       }
    },
    "GR_3": {
@@ -85,10 +89,6 @@
          "site": "https://colunastortas.wordpress.com/2015/08/03/pierre-bourdieu-download/#bourdieu3",
          "descrição": "18 livros de Pierre Bourdieu para download gratuito + 21 artigos sobre sua obra | Colunas Tortas"
       },
-      "GR_4_3": {
-         "site": "http://www.liber.ufpe.br/teses/arquivo/20041028135821.pdf",
-         "descrição": "Posseiros, rendeiros e proprietários: estrutura fundiária e dinâmica agro-mercantil no alto sertão da bahia (1750-1850)"
-      },
       "GR_4_4": {
          "site": "http://memoria.bn.br/hdb/periodico.aspx",
          "descrição": "::: BIBLIOTECA NACIONAL - Hemeroteca Digital Brasileira:::"
@@ -107,10 +107,6 @@
       "GR_5_1": {
          "site": "http://www.artofmanliness.com/2016/01/21/how-to-restore-a-vintageantique-pocket-knife/",
          "descrição": "How To Clean Restore A Vintage Pocketknife | The Art Of Manliness"
-      },
-      "GR_5_2": {
-         "site": "http://www.tameshigiri.ca/2014/06/03/cord-rope-and-combat/",
-         "descrição": "Cord, rope and combat | Tameshigiri.ca"
       },
       "GR_5_3": {
          "site": "http://nova.astrometry.net/",
@@ -149,10 +145,6 @@
    },
    "GR_8": {
       "Grupo": "Estatística, R, IBGE etc",
-      "GR_8_1": {
-         "site": "https://ww2.ibge.gov.br/apps/monitoramento_cobertura_uso_terra/v1/",
-         "descrição": "Cobertura e Uso da Terra"
-      },
       "GR_8_2": {
          "site": "http://bi.mte.gov.br/bgcaged/inicial.php",
          "descrição": "bi.mte.gov.br/bgcaged/inicial.php"
@@ -165,14 +157,6 @@
          "site": "http://factominer.free.fr/question/FAQ.html",
          "descrição": "FactoMineR FAQ"
       },
-      "GR_8_5": {
-         "site": "https://landsatlook.usgs.gov/viewer.html",
-         "descrição": "LandsatLook"
-      },
-      "GR_8_6": {
-         "site": "https://dados.gov.br/dados/organizacoes/visualizar/ministerio-do-desenvolvimento-social-mds",
-         "descrição": "Cadúnico e outros dados do MDS"
-      },
       "GR_8_7": {
          "site": "https://www.car.gov.br/publico/imoveis/index",
          "descrição": "Base CAR"
@@ -184,18 +168,38 @@
       "GR_8_9": {
          "site": "https://www.gov.br/produtividade-e-comercio-exterior/pt-br/assuntos/comercio-exterior/estatisticas/base-de-dados-bruta",
          "descrição": " Comércio Exterior"
+      },
+      "GR_8_10": {
+         "site": "https://www.openstreetmap.org/#map=5/-15.130/-53.189",
+         "descrição": "OpenStreetMap"
+      },
+      "GR_8_11": {
+         "site": "https://download.geofabrik.de/",
+         "descrição": "Mapas já baixados do OSM"
+      },
+      "GR_8_12": {
+         "site": "https://smap14.mda.gov.br/extratodap/",
+         "descrição": "Extrato DAP"
+      },
+      "GR_8_13": {
+         "site": "https://sistemas.agricultura.gov.br/caf/dados-publicos/membros-ufpa",
+         "descrição": "Extrato CAF"
+      },
+      "GR_8_14": {
+         "site": "https://datasus.saude.gov.br/informacoes-de-saude-tabnet/",
+         "descrição": "DataSUS"
+      },
+      "GR_8_15": {
+         "site": "https://sidra.ibge.gov.br/home/pmc/brasil",
+         "descrição": "IBGE SIDRA"
+      },
+      "GR_8_16": {
+         "site": "https://ieps.org.br/",
+         "descrição": "Instituto de Estudos para Políticas  de Saúde - IEPS"
       }
    },
    "GR_9": {
       "Grupo": "Diversos",
-      "GR_9_1": {
-         "site": "https://nacoesunidas.org/pos2015/",
-         "descrição": "17 Objetivos para transformar nosso mundo | ONU Brasil"
-      },
-      "GR_9_2": {
-         "site": "http://www.dw.com/pt-br/como-obter-a-cidadania-alem%C3%A3/g-19297105",
-         "descrição": "Como obter a cidadania alemã | Todo o conteúdo | DW.COM | 02.06.2016"
-      },
       "GR_9_3": {
          "site": "http://www.lemans.org/en",
          "descrição": "ACO - Automobile Club de le Ouest Le Mans"
@@ -223,14 +227,6 @@
          "site": "https://www.gnu.org/software/emacs/manual/html_node/elisp/Writing-Emacs-Primitives.html",
          "descrição": "https://www.gnu.org/software/emacs/manual/html_node/elisp/Writing-Emacs-Primitives.html"
       },
-      "GR_10_6": {
-         "site": "http://www.cs.bham.ac.uk/~jxb/inc.html",
-         "descrição": "http://www.cs.bham.ac.uk/~jxb/inc.html"
-      },
-      "GR_10_7": {
-         "site": "http://www.cs.bham.ac.uk/~jxb/INC/nn.html",
-         "descrição": "http://www.cs.bham.ac.uk/~jxb/INC/nn.html"
-      },
       "GR_10_8": {
          "site": "https://orgmode.org/manual/Command-and-Function-Index.html",
          "descrição": "https://orgmode.org/manual/Command-and-Function-Index.html"
@@ -253,6 +249,56 @@
       "GR_12_1": {
          "site": "https://www.lettering-daily.com/calligraphy-history/",
          "descrição": "https://www.lettering-daily.com/calligraphy-history/"
+      },
+      "GR_12_2": {
+         "site": "https://www.fontpalace.com/",
+         "descrição": "Font Palace"
+      }
+   },
+   "GR_13": {
+      "Grupo": "Tecnologia e Sociedade",
+      "GR_13_2": {
+         "site": "https://www.ruhabenjamin.com/",
+         "descrição": "Ruha Benjamin"
+      },
+      "GR_13_3": {
+         "site": "https://plato.stanford.edu/entries/technology/#MethIssuDesiDeciMaki",
+         "descrição": "Filosofia da Tecnologia - Universidade de Stanford"
+      },
+      "GR_13_4": {
+         "site": "https://plato.stanford.edu/entries/computability/",
+         "descrição": "Computabilidade e Complexidade - Universidade de Stanford"
+      },
+      "GR_13_5": {
+         "site": "https://annajobin.com/",
+         "descrição": "Anna Jobin"
+      },
+      "GR_13_6": {
+         "site": "https://www.jonniepenn.com/",
+         "descrição": "Jonnie Penn"
+      },
+      "GR_13_7": {
+         "site": "https://incidentdatabase.ai/",
+         "descrição": "AI Incident Database"
+      }
+   },
+   "GR_14": {
+      "Grupo": "Origami e outras tecnologias",
+      "GR_14_1": {
+         "site": "https://origami-resource-center.com/",
+         "descrição": "Origami Resource Center"
+      },
+      "GR_14_2": {
+         "site": "https://www.paperkawaii.com/useful-origami/",
+         "descrição": "Useful Origami - Paper Kawaii"
+      },
+      "GR_14_3": {
+         "site": "https://www.compliantmechanisms.byu.edu/",
+         "descrição": "Compliant Mechanisms - Brigham Young University"
+      },
+      "GR_14_4": {
+         "site": "http://origametry.net/",
+         "descrição": "Origametry - Tom Hull's Home Page"
       }
    }
 }

@@ -1,0 +1,44 @@
+<html>
+  <head>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+        <title>EPVE a caminho</title>
+        <meta charset="utf-8">
+  </head>
+  <style>
+    table, th, td {
+	border:1px solid black;
+    }
+  </style>
+  <script language = "Javascript">
+    <!-- Fonte para arquivos externos: https://developer.chrome.com/articles/file-system-access/ -->
+    async function pegaArqHandle(){
+	const [handle] = await window.showOpenFilePicker();
+	const arquivo = await handle.getFile();
+	const conteudoJson = await arquivo.text();
+
+	dados = JSON.parse(conteudoJson);
+	
+	textao = "<table><tr><th>Tipo</th><th>Item</th><th>Produto</th><th>Qtde</th><th>Preço</th><th>Valor residual</th><th>Vida útil</th></td>";
+	
+	for (var oi in dados.dados){
+	    textao += "<tr>";
+	    for (var i in dados.dados[oi]){
+		textao += "<td>" + dados.dados[oi][i] + "</td>";
+	    }
+	    textao += "</tr>";
+	}
+
+	textao += "</table>";
+	
+	document.getElementById("preencher").innerHTML = textao;
+	
+	return handle;
+    }
+  </script>
+  <body>
+    <input type="button" value="Abrir" onclick="Javascript:pegaArqHandle()">
+    <div id="preencher"></div>
+   </body>
+</html>
+
+    

@@ -1,0 +1,284 @@
+{
+    "Descrição = ": "Registro de sites interessantes e temporários",
+    "Autor = ": "Paulo Seifer",
+    "Última atualização": "26/10/2023 23:04:00",
+    "GR_1": {
+        "Grupo": "Geral",
+        "GR_1_1": {
+            "site": "http://orgmode.org/orgcard.txt",
+            "descrição": "http://orgmode.org/orgcard.txt"
+        },
+        "GR_1_2": {
+            "site": "https://orgmode.org/worg/org-glossary.html",
+            "descrição": "https://orgmode.org/worg/org-glossary.html"
+        },
+        "GR_1_3": {
+            "site": "https://www.debuggex.com/",
+            "descrição": "Debuga Regex"
+        }
+    },
+    "GR_2": {
+        "Grupo": "Energia, desenvolvimento",
+        "GR_2_1": {
+            "site": "https://www.sciencedirect.com/journal/energy-research-and-social-science/",
+            "descrição": "Energy Research and Social Science Journal"
+        },
+        "GR_2_2": {
+            "site": "https://onlinelibrary.wiley.com/journal/14677660",
+            "descrição": "Development and Social Change Journal"
+        },
+        "GR_2_3": {
+            "site": "http://energy.mit.edu/",
+            "descrição": "http://energy.mit.edu/"
+        },
+        "GR_2_4": {
+            "site": "https://www.energiaecomunidades.com.br/",
+            "descrição": "Rede Energia e Comunidades"
+        },
+        "GR_2_5": {
+            "site": "https://www.agenciainfra.com/",
+            "descrição": "https://www.agenciainfra.com/"
+        },
+        "GR_2_6": {
+            "site": "https://www.ibama.gov.br/component/legislacao/?view=legislacao&legislacao=133565",
+            "descrição": "Resolu��o Conama 462, de 24 de julho de 2014"
+        }
+    },
+    "GR_3": {
+        "Grupo": "Jornais, revistas etc",
+        "GR_3_1": {
+            "site": "https://www.atlasobscura.com/",
+            "descrição": "https://www.atlasobscura.com/"
+        },
+        "GR_3_2": {
+            "site": "https://arstechnica.com/",
+            "descrição": "https://arstechnica.com/"
+        },
+        "GR_3_3": {
+            "site": "http://science.sciencemag.org/",
+            "descrição": "http://science.sciencemag.org/"
+        },
+        "GR_3_4": {
+            "site": "http://pagina22.com.br/",
+            "descrição": "http://pagina22.com.br/"
+        },
+        "GR_3_5": {
+            "site": "http://www.p22on.com.br/",
+            "descrição": "http://www.p22on.com.br/"
+        },
+        "GR_3_6": {
+            "site": "https://www.nationalgeographicbrasil.com/",
+            "descrição": "https://www.nationalgeographicbrasil.com/"
+        },
+        "GR_3_7": {
+            "site": "https://www.nationalgeographic.com/",
+            "descrição": "https://www.nationalgeographic.com/"
+        }
+    },
+    "GR_4": {
+        "Grupo": "História, ciências etc",
+        "GR_4_1": {
+            "site": "https://www.coase.org/niereadinglist.htm",
+            "descrição": "New Institutional Economics: Reading List, Introductory"
+        },
+        "GR_4_2": {
+            "site": "https://colunastortas.wordpress.com/2015/08/03/pierre-bourdieu-download/#bourdieu3",
+            "descrição": "18 livros de Pierre Bourdieu para download gratuito + 21 artigos sobre sua obra | Colunas Tortas"
+        },
+        "GR_4_3": {
+            "site": "http://www.liber.ufpe.br/teses/arquivo/20041028135821.pdf",
+            "descrição": "Posseiros, rendeiros e proprietários: estrutura fundiária e dinâmica agro-mercantil no alto sertão da bahia (1750-1850)"
+        },
+        "GR_4_4": {
+            "site": "http://memoria.bn.br/hdb/periodico.aspx",
+            "descrição": "::: BIBLIOTECA NACIONAL - Hemeroteca Digital Brasileira:::"
+        },
+        "GR_4_5": {
+            "site": "http://visual-memory.co.uk/daniel/Documents/S4B/semiotic.html",
+            "descrição": "Semiotics for Beginners by Daniel Chandler"
+        },
+        "GR_4_6": {
+            "site": "https://www.historyoftechnology.org/",
+            "descrição": "Society for the History of Technology"
+        }
+    },
+    "GR_5": {
+        "Grupo": "Carpintaria, artesanato, trabalho manual etc",
+        "GR_5_1": {
+            "site": "http://www.artofmanliness.com/2016/01/21/how-to-restore-a-vintageantique-pocket-knife/",
+            "descrição": "How To Clean Restore A Vintage Pocketknife | The Art Of Manliness"
+        },
+        "GR_5_2": {
+            "site": "http://www.tameshigiri.ca/2014/06/03/cord-rope-and-combat/",
+            "descrição": "Cord, rope and combat | Tameshigiri.ca"
+        },
+        "GR_5_3": {
+            "site": "http://nova.astrometry.net/",
+            "descrição": "Astrometry.net"
+        },
+        "GR_5_4": {
+            "site": "http://darksitefinder.com/maps/world.html",
+            "descrição": "DarkSiteFinder.com - Light Pollution Map"
+        }
+    },
+    "GR_6": {
+        "Grupo": "Imagem, vídeo, filmes, séries etc",
+        "GR_6_1": {
+            "site": "http://www.cambridgeincolour.com/",
+            "descrição": "Cambridge in Colour - Photography Tutorials Learning Community"
+        }
+    },
+    "GR_7": {
+        "Grupo": "Pão, café etc",
+        "GR_7_1": {
+            "site": "http://www.thefreshloaf.com/handbook/poolish-baguettes",
+            "descrição": "Poolish Baguettes | The Fresh Loaf"
+        },
+        "GR_7_2": {
+            "site": "https://www.home-barista.com/espresso-guide-diagnose-extraction-problems.html",
+            "descrição": "Diagnosing Espresso Extraction Problems - Espresso Guide Home-Barista.com"
+        },
+        "GR_7_3": {
+            "site": "http://www.cervejacapitu.com.br/fazendo-malte-caseiro-com-a-capitu",
+            "descrição": "Fazendo Malte caseiro com a Capitu"
+        },
+        "GR_7_4": {
+            "site": "https://www.espressoparts.com/blogs/barista-basics-tutorials/cleaning-boiler",
+            "descrição": "https://www.espressoparts.com/blogs/barista-basics-tutorials/cleaning-boiler"
+        }
+    },
+    "GR_8": {
+        "Grupo": "Estatística, R, IBGE etc",
+        "GR_8_1": {
+            "site": "https://ww2.ibge.gov.br/apps/monitoramento_cobertura_uso_terra/v1/",
+            "descrição": "Cobertura e Uso da Terra"
+        },
+        "GR_8_2": {
+            "site": "http://bi.mte.gov.br/bgcaged/inicial.php",
+            "descrição": "bi.mte.gov.br/bgcaged/inicial.php"
+        },
+        "GR_8_3": {
+            "site": "http://www.sthda.com/english/articles/31-principal-component-methods-in-r-practical-guide/114-mca-multiple-correspondence-analysis-in-r-essentials/",
+            "descrição": "Visualização MCA"
+        },
+        "GR_8_4": {
+            "site": "http://factominer.free.fr/question/FAQ.html",
+            "descrição": "FactoMineR FAQ"
+        },
+        "GR_8_5": {
+            "site": "https://landsatlook.usgs.gov/viewer.html",
+            "descrição": "LandsatLook"
+        },
+        "GR_8_6": {
+            "site": "https://dados.gov.br/dados/organizacoes/visualizar/ministerio-do-desenvolvimento-social-mds",
+            "descrição": "Cad�nico e outros dados do MDS"
+        },
+        "GR_8_7": {
+            "site": "https://www.car.gov.br/publico/imoveis/index",
+            "descrição": "Base CAR"
+        },
+        "GR_8_8": {
+            "site": "http://comexstat.mdic.gov.br/pt/municipio",
+            "descrição": "Comercio exterior"
+        },
+        "GR_8_9": {
+            "site": "https://www.gov.br/produtividade-e-comercio-exterior/pt-br/assuntos/comercio-exterior/estatisticas/base-de-dados-bruta",
+            "descrição": " Com�rcio Exterior"
+        }
+    },
+    "GR_9": {
+        "Grupo": "Diversos",
+        "GR_9_1": {
+            "site": "https://nacoesunidas.org/pos2015/",
+            "descrição": "17 Objetivos para transformar nosso mundo | ONU Brasil"
+        },
+        "GR_9_2": {
+            "site": "http://www.dw.com/pt-br/como-obter-a-cidadania-alem%C3%A3/g-19297105",
+            "descrição": "Como obter a cidadania alemã | Todo o conteúdo | DW.COM | 02.06.2016"
+        },
+        "GR_9_3": {
+            "site": "http://www.lemans.org/en",
+            "descrição": "ACO - Automobile Club de le Ouest Le Mans"
+        }
+    },
+    "GR_10": {
+        "Grupo": "Programação, desenvolvimento, computação etc",
+        "GR_10_1": {
+            "site": "https://www.fsf.org/",
+            "descrição": "https://www.fsf.org/"
+        },
+        "GR_10_2": {
+            "site": "https://www.gnu.org/",
+            "descrição": "https://www.gnu.org/"
+        },
+        "GR_10_3": {
+            "site": "https://rextester.com/l/pascal_online_compiler",
+            "descrição": "https://rextester.com/l/pascal_online_compiler"
+        },
+        "GR_10_4": {
+            "site": "https://github.com/josephmisiti/awesome-machine-learning",
+            "descrição": "https://github.com/josephmisiti/awesome-machine-learning"
+        },
+        "GR_10_5": {
+            "site": "https://www.gnu.org/software/emacs/manual/html_node/elisp/Writing-Emacs-Primitives.html",
+            "descrição": "https://www.gnu.org/software/emacs/manual/html_node/elisp/Writing-Emacs-Primitives.html"
+        },
+        "GR_10_6": {
+            "site": "http://www.cs.bham.ac.uk/~jxb/inc.html",
+            "descrição": "http://www.cs.bham.ac.uk/~jxb/inc.html"
+        },
+        "GR_10_7": {
+            "site": "http://www.cs.bham.ac.uk/~jxb/INC/nn.html",
+            "descrição": "http://www.cs.bham.ac.uk/~jxb/INC/nn.html"
+        },
+        "GR_10_8": {
+            "site": "https://orgmode.org/manual/Command-and-Function-Index.html",
+            "descrição": "https://orgmode.org/manual/Command-and-Function-Index.html"
+        },
+        "GR_10_9": {
+            "site": "https://api.libreoffice.org/",
+            "descrição": "https://api.libreoffice.org/"
+        },
+        "GR_10_10": {
+            "site": "https://wiki.documentfoundation.org/Macros/Python_Guide/Calc/Calc_sheets",
+            "descrição": "https://wiki.documentfoundation.org/Macros/Python_Guide/Calc/Calc_sheets"
+        },
+        "GR_10_11": {
+            "site": "http://xahlee.info/emacs/emacs/elisp.html",
+            "descrição": "http://xahlee.info/emacs/emacs/elisp.html"
+        },
+        "GR_10_12": {
+            "site": "https://jsononline.net/pt/json-checker",
+            "descrição": "Testa integridade de documentos json"
+        }
+    },
+    "GR_11": {
+        "Grupo": "tmp",
+        "GR_11_1": {
+            "site": "https://correiodoestado.com.br/noticia/amp/411985/rodovia-que-vai-auxiliar-a-rota-bioceanica-esta-abandonada/",
+            "descrição": "https://correiodoestado.com.br/noticia/amp/411985/rodovia-que-vai-auxiliar-a-rota-bioceanica-esta-abandonada/"
+        },
+        "GR_11_2": {
+            "site": "https://www.digitalocean.com/community/tutorials/android-internal-storage-example-tutorial",
+            "descrição": "https://www.digitalocean.com/community/tutorials/android-internal-storage-example-tutorial"
+        },
+        "GR_11_3": {
+            "site": "https://portal.fgv.br/artigos/panorama-internacional-desafios-hidrogenio-verde",
+            "descrição": "https://portal.fgv.br/artigos/panorama-internacional-desafios-hidrogenio-verde"
+        }
+    },
+    "GR_12": {
+        "Grupo": "Caligrafia",
+        "GR_12_1": {
+            "site": "https://www.lettering-daily.com/calligraphy-history/",
+            "descrição": "https://www.lettering-daily.com/calligraphy-history/"
+        }
+    },
+    "GR_13": {
+        "Grupo": "Teste",
+        "GR_13_1": {
+            "site": "www.uol.com.br",
+            "descrição": "Eterno teste"
+        }
+    }
+}
